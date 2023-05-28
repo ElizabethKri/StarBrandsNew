@@ -26,10 +26,11 @@ export class HeaderComponent implements OnInit{
           },
           {
             label: 'Sale',
+            icon: 'pi pi-bolt',
             routerLink: ['sales'],
           },
       {
-        label: 'Пользователи',
+        label: 'Профиль',
         icon: 'pi pi-fw pi-user',
         items: [
           {
@@ -42,25 +43,24 @@ export class HeaderComponent implements OnInit{
             icon: 'pi pi-fw pi-users',
             routerLink: ['authorization']
           },
+          {
+            label: 'Выход',
+            icon: 'pi pi-fw pi-power-off',
+            routerLink: ['auth'],
+          }
         ]
       },
       {
         label: 'Нравится',
-        icon: 'pi-heart-fill',
+        icon: 'pi pi-heart-fill',
         routerLink: ['likes'],
       },
 
       {
         label: 'Корзина',
-        icon: 'pi-shopping-bag',
+        icon: 'pi pi-shopping-bag',
         routerLink: ['basket'],
       },
-
-      {
-        label: 'Выход',
-        icon: 'pi pi-fw pi-power-off',
-        routerLink: ['auth'],
-      }
     ];
   }
 }
