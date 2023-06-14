@@ -5,6 +5,9 @@ const routes: Routes = [
   {path: 'starbrands',
   loadChildren: () => import('./pages/starbrands/starbrands.module').then(m => m.StarbrandsModule)
   },
+  {path: 'registration',
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+  },
   {path: '**',
    redirectTo: 'starbrands'
   }
