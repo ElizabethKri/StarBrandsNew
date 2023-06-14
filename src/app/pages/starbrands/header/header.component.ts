@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit{
           {
             label: 'Регистрация',
             icon: 'pi pi-fw pi-user-plus',
-            routerLink: ['registration'],
+            routerLink: ['/registration'],
           },
           {
             label: 'Вход',
