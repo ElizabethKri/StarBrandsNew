@@ -1,38 +1,47 @@
 <div>
+  <app-header></app-header>
   <h1 class = "text">Новые клиенты</h1>
-  <h2>Создать аккаунт очень просто. Просто заполните форму ниже и получайте все преимущества зарегистрированных клиентов</h2>
+  <h2>Создать аккаунт очень просто. Просто заполните форму ниже и получайте все преимущества зарегистрированных клиентов:</h2>
+  <ol>
+    <li>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</li>
+    <p>Доступ к мероприятиям и специальным предложениям</p>
+    <li>СПИСОК ИЗБРАННОГО</li>
+    <p>Добавьте ваши любимые товары</p>
+  </ol>
 </div>
-<div class="d-flex flex-column col-6 m-auto registration-input-wrap card  md:flex-row gap-3">
+<h2 class = "text">Регистрация</h2>
+<div class="d-flex   m-auto registration-input-wrap md:flex-row gap-3 card">
   <div>
-    <span class="mx-3">Email</span>
+    <span class="mx-3 user">Email</span>
     <input type="text"
+           class="mt-3"
            pInputText
+           placeholder="aaa@gmail.com"
            [ngClass]="{'input-error': !login}"
            [(ngModel)]="login"/>
   </div>
   <div>
-    <span class="mx-3">Пароль</span>
-    <input type="password"
+    <span class="mx-3 user">Пароль</span>
+    <p-password type="password"
            class="mt-3"
-           pInputText
            [ngClass]="{'input-error': !psw}"
-           [(ngModel)]="psw"/>
+           [(ngModel)]="psw"
+           [toggleMask]="true"/>
   </div>
 
   <div>
-    <span class="mx-3">Подтверждение пароля</span>
+    <span class="mx-3 user">Подтверждение пароля</span>
     <p-password type="password"
            class="mt-3"
-           pInputText
            [ngClass]="{'input-error': !pswRepeat}"
            [(ngModel)]="pswRepeat"
            [toggleMask]="true"/>
   </div>
 
 </div>
-<div class="mt-4">
-  <h4>Личная информация</h4>
-  <div class = "mt-3 user-info" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<div class="mt-5">
+  <h2 class = "text">Личная информация</h2>
+  <div class = "d-flex   m-auto registration-input-wrap  md:flex-row gap-3 user-info card" [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class = "mt-3">
       <!--          <span class="mx-3">Имя</span>-->
       <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Имя'}"></ng-container>
@@ -64,16 +73,7 @@
       <!--          <span class="mx-3">Телефон</span>-->
       <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Телефон'}"></ng-container>
       <p-inputMask
-        mask="Например: (999) 999-9999"
-
-        placeholder="(999) 999-9999"></p-inputMask>
-    </div>
-
-    <div class = "mt-3">
-      <!--          <span class="mx-3">Телефон</span>-->
-      <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Телефон'}"></ng-container>
-      <p-inputMask
-        mask="Например: (999) 999-9999"
+        mask="(999) 999-9999"
         placeholder="(999) 999-9999"></p-inputMask>
     </div>
 
@@ -99,7 +99,7 @@
     <button [disabled]="!login || !psw || !pswRepeat"
             (click)="registration($event)"
             type="button"
-            class="btn btn-success">
+            class="btn btn-info">
       Зарегистрироваться</button>
   </div>
     <ng-template #userFieldTitle let-value = "titleValue">
@@ -107,3 +107,4 @@
     </ng-template>
 </div>
 </div>
+<p-toast position="top-left"></p-toast>
