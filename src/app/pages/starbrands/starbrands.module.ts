@@ -26,8 +26,8 @@ import {ButtonModule} from "primeng/button";
         StarbrandsRoutingModule,
         MenubarModule,
         RouterModule,
-         CarouselModule,
-      ButtonModule
+        CarouselModule,
+        ButtonModule
     ]
 })
 export class StarbrandsModule { }
