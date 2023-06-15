@@ -18,16 +18,16 @@ export class HeaderComponent implements OnInit{
     this.items = [
       {
         label: 'Для женщин',
-        routerLink: ['women'],
+        routerLink: ['/women'],
           },
           {
             label: 'Для мужчин',
-            routerLink: ['man'],
+            routerLink: ['/man'],
           },
           {
             label: 'Sale',
             icon: 'pi pi-bolt',
-            routerLink: ['sales'],
+            routerLink: ['/sales'],
           },
       {
         label: 'Профиль',
@@ -41,12 +41,12 @@ export class HeaderComponent implements OnInit{
           {
             label: 'Вход',
             icon: 'pi pi-fw pi-users',
-            routerLink: ['authorization']
+            routerLink: ['/authorization']
           },
           {
             label: 'Выход',
             icon: 'pi pi-fw pi-power-off',
-            routerLink: ['auth'],
+            routerLink: ['/starbrands'],
           }
         ]
       },
