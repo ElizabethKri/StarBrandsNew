@@ -31,9 +31,7 @@ export class ManService {
           "Высота\n" +
           "18.0 cm\n",
         "img": "1. Сумка Кросс-Боди S Spritz.jpg",
-        "type": "multi",
-        "date": "2023-06-13",
-        "productId": "fa51-21a5-315b-ff21"
+        "productId": "1000"
       },
       {
         "model": "MAN COSMO",
