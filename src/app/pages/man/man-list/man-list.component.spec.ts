@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ManListComponent } from './man-list.component';
+
+describe('ManListComponent', () => {
+  let component: ManListComponent;
+  let fixture: ComponentFixture<ManListComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ManListComponent]
+    });
+    fixture = TestBed.createComponent(ManListComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
