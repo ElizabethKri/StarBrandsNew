@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {debounceTime, fromEvent, Subject, takeUntil} from "rxjs";
+import {Products} from "../../../interface/products";
 
 
 @Component({
@@ -9,6 +11,11 @@ import {MenuItem} from "primeng/api";
 })
 
 export class HeaderComponent implements OnInit{
+  @ViewChild('productSearch') productSearch: ElementRef;
+  productSearchValue: string;
+  destroyer = new Subject();
+  productsCopy: Products[];
+  products: Products[];
 
   constructor(){}
 
@@ -53,15 +60,34 @@ export class HeaderComponent implements OnInit{
       {
         label: 'Нравится',
         icon: 'pi pi-heart-fill',
-        routerLink: ['likes'],
+        routerLink: ['/likes'],
       },
 
       {
         label: 'Корзина',
         icon: 'pi pi-shopping-bag',
-        routerLink: ['basket'],
+        routerLink: ['/basket'],
       },
     ];
+  }
+
+  ngAfterViewInit(){
+    const fromEventOberver = fromEvent(this.productSearch.nativeElement, "keyup")
+    fromEventOberver.pipe(
+      debounceTime(200),
+      takeUntil(this.destroyer)
+    ).subscribe((ev: any) => {
+        if (this.productSearchValue) {
+          this.products = this.productsCopy.filter((el) => {
+            //проверка на строку, ищет при всех регистрах
+            const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase(): '';
+            return nameToLower.includes(this.productSearchValue.toLowerCase());
+          });
+        } else {
+          this.products = [...this.productsCopy]
+        }
+      }
+    );
   }
 }
 
