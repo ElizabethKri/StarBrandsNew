@@ -10,6 +10,9 @@ import { OrdersComponent } from './pages/personal-account/orders/orders.componen
 import { PersonalAccountComponent } from './pages/personal-account/personal-account.component';
 import {RouterModule} from "@angular/router";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ManComponent } from './pages/man/man/man.component';
+import { WomenComponent } from './pages/man/women/women.component';
+import { SalesComponent } from './pages/sales/sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     BasketComponent,
     LikeComponent,
     OrdersComponent,
-    PersonalAccountComponent
+    PersonalAccountComponent,
+    ManComponent,
+    WomenComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
