@@ -1,1 +1,17 @@
-<p>starbrands-list works!</p>
+<div class="d-flex flex-column h-100">
+  <header>
+    <app-header></app-header>
+  </header>
+  <div class="product-item col-3 m-2"
+       (click)="goToProductInfoPage(item)"
+       *ngFor="let item of products; let i = index">
+    <div class="product-title">{{item.module}}</div>
+    <div class="product-title">{{item.name}}</div>
+    <div class="product-title">{{item.price}}</div>
+    <div class="product-title">{{item.color}}</div>
+    <div class="ticket-img">
+      <img class="w-100" src="/assets/img {{item.img}}">
+    </div>
+    <div >{{item.description}}</div>
+  </div>
+</div>

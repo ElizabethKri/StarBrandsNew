@@ -1,0 +1,18 @@
+.product-item{
+  height: 300px;
+  border: 1px solid darkturquoise;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .product-title{
+    padding: 2px;
+  };
+
+& img {
+  height: 200px;
+}
+}
+
+
