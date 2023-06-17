@@ -3,7 +3,7 @@
     <app-header></app-header>
   </header>
 
-  <div class="main-content d-flex h-50">
+  <div class="main-content d-flex h-50 main-content">
     <div>
       <router-outlet></router-outlet>
       <div class="card">
@@ -18,6 +18,7 @@
                 <h4 class="mb-1">{{ product.module }}</h4>
                 <h4 class="mb-1">{{ product.name }}</h4>
                 <h6 class="mt-0 mb-3">{{product.price}}</h6>
+                <h6 class="mt-0 mb-3">{{product.collectionNew}}</h6>
                 <div class="car-buttons mt-5">
                   <p-button type="button" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
                   <p-button type="button" styleClass="p-button-success p-button mr-2" icon="pi pi-shopping-bag"></p-button>
@@ -27,6 +28,17 @@
           </ng-template>
         </p-carousel>
         <h1 class="text">Новая коллекция для женщин</h1>
+        <p-card [value]="productsW" header= "{{ product.module }}" subheader="{{ product.name }}" [style]="{ width: '360px' }">
+          <ng-template let-product pTemplate="header">
+            <img alt="Card" src="/assets/img/women{{ productsW.img }}" />
+          </ng-template>
+          <p class="mb-1">{{ product.price}}
+          </p>
+          <ng-template pTemplate="footer">
+            <p-button label="Нравиться" icon="pi pi-heart-fill"></p-button>
+            <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+          </ng-template>
+        </p-card>
       </div>
     </div>
   </div>

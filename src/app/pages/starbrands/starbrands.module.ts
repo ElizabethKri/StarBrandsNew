@@ -10,6 +10,8 @@ import {StarbrandsComponent} from "./starbrands.component";
 import {RouterModule} from "@angular/router";
 import {CarouselModule} from "primeng/carousel";
 import {ButtonModule} from "primeng/button";
+import {CardModule} from "primeng/card";
+import { AsideComponent } from './aside/aside/aside.component';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import {ButtonModule} from "primeng/button";
         HeaderComponent,
         FooterComponent,
         StarbrandsListComponent,
-        StarbrandsComponent],
+        StarbrandsComponent,
+        AsideComponent],
     exports: [
         HeaderComponent
     ],
@@ -27,7 +30,8 @@ import {ButtonModule} from "primeng/button";
         MenubarModule,
         RouterModule,
         CarouselModule,
-        ButtonModule
+        ButtonModule,
+        CardModule
     ]
 })
 export class StarbrandsModule { }
