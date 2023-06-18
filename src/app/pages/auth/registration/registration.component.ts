@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ServerError} from "../../../interface/error";
-import {AuthService} from "../../../services/auth/auth.service";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {IUser} from "../../../interface/user";
 import {MessageService} from "primeng/api";
@@ -29,7 +28,6 @@ export class RegistrationComponent implements OnInit {
 
 
   constructor(private messageService: MessageService,
-              private authService: AuthService,
               private http: HttpClient,
               private userService: UserService,
               ) {
