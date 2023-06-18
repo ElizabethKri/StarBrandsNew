@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'starbrands-list',
       component: StarbrandsListComponent
-    }
+    },
   ]}
 ];
 
