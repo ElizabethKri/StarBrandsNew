@@ -39,5 +39,12 @@ host ::ng-deep {
 .main-content{
   flex: 1;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
+  & > div {
+    width: 100%;
+  }
+}
+.woman-list {
+  display: flex;
+  flex-wrap: wrap;
 }
