@@ -1,7 +1,6 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 import {Router} from "@angular/router";
 import {MessageService} from "primeng/api";
-import {AuthService} from "../../../services/auth/auth.service";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {IUser} from "../../../interface/user";
 import {UserService} from "../../../services/user/user.service";
@@ -24,8 +23,7 @@ export class AuthorizationComponent implements OnInit, OnChanges, OnDestroy {
   authTextButton: string;
   id: string;
 
-  constructor(private authService: AuthService,
-              private messageService: MessageService,
+  constructor(private messageService: MessageService,
               private router: Router,
               private userService: UserService,
               private http: HttpClient) {
