@@ -28,17 +28,22 @@
           </ng-template>
         </p-carousel>
         <h1 class="text">Новая коллекция для женщин</h1>
-        <p-card [value]="productsW" header= "{{ product.module }}" subheader="{{ product.name }}" [style]="{ width: '360px' }">
-          <ng-template let-product pTemplate="header">
-            <img alt="Card" src="/assets/img/women{{ productsW.img }}" />
-          </ng-template>
-          <p class="mb-1">{{ product.price}}
-          </p>
-          <ng-template pTemplate="footer">
-            <p-button label="Нравиться" icon="pi pi-heart-fill"></p-button>
-            <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-          </ng-template>
-        </p-card>
+        <div class="woman-list">
+          <p-card *ngFor="let item of productsW"  [style]="{ width: '360px' }">
+            <ng-template let-product pTemplate="header">
+              <p>{{ item.module }}</p>
+              <p>{{ item.name }}</p>
+              <img alt="Card" src="/assets/img/women/{{ item.img }}" />
+            </ng-template>
+            <p class="mb-1">{{ item.price}}
+            </p>
+            <ng-template pTemplate="footer">
+              <p-button label="Нравиться" icon="pi pi-heart-fill"></p-button>
+              <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            </ng-template>
+          </p-card>
+        </div>
+
       </div>
     </div>
   </div>
