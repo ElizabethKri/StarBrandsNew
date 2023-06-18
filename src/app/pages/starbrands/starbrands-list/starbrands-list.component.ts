@@ -8,7 +8,7 @@ import {debounceTime, fromEvent, Subject, takeUntil} from "rxjs";
   templateUrl: './starbrands-list.component.html',
   styleUrls: ['./starbrands-list.component.scss']
 })
-export class StarbrandsListComponent implements OnInit {
+export class StarbrandsListComponent  {
   products: Products[]
 
 
