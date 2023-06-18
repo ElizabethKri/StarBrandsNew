@@ -11,7 +11,8 @@ import {RouterModule} from "@angular/router";
 import {CarouselModule} from "primeng/carousel";
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
-import { AsideComponent } from './aside/aside/aside.component';
+import {FormsModule} from "@angular/forms";
+
 
 
 @NgModule({
@@ -19,13 +20,13 @@ import { AsideComponent } from './aside/aside/aside.component';
         HeaderComponent,
         FooterComponent,
         StarbrandsListComponent,
-        StarbrandsComponent,
-        AsideComponent],
+        StarbrandsComponent],
     exports: [
         HeaderComponent
     ],
     imports: [
         CommonModule,
+        FormsModule,
         StarbrandsRoutingModule,
         MenubarModule,
         RouterModule,
