@@ -66,7 +66,7 @@ export class AuthorizationComponent implements OnInit, OnChanges, OnDestroy {
       this.userService.setToken(token);
       this.userService.setToStore(token);
 
-      this.router.navigate(['starbrands/starbrands-list']);
+      this.router.navigate(['starbrands/starbrands-item']);
 
     }, (err: HttpErrorResponse) => {
       const serverError = <ServerError>err.error;

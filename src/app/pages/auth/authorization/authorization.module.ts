@@ -20,10 +20,10 @@ import {MessageService} from "primeng/api";
     FormsModule,
     InputTextModule,
     ToastModule,
-    StarbrandsModule,
     InputNumberModule,
     InputMaskModule,
-    PasswordModule
+    PasswordModule,
+    StarbrandsModule
   ],
   providers: [MessageService]
 })
