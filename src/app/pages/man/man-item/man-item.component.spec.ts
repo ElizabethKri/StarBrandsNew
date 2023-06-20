@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManListComponent } from './man-list.component';
+import { ManItemComponent } from './man-item.component';
 
 describe('ManListComponent', () => {
-  let component: ManListComponent;
-  let fixture: ComponentFixture<ManListComponent>;
+  let component: ManItemComponent;
+  let fixture: ComponentFixture<ManItemComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManListComponent]
+      declarations: [ManItemComponent]
     });
-    fixture = TestBed.createComponent(ManListComponent);
+    fixture = TestBed.createComponent(ManItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
