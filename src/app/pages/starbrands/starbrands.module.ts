@@ -21,9 +21,10 @@ import {FormsModule} from "@angular/forms";
         FooterComponent,
         StarbrandsItemComponent,
         StarbrandsComponent],
-    exports: [
-        HeaderComponent
-    ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
+  ],
     imports: [
         CommonModule,
         FormsModule,
