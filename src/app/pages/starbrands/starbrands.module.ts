@@ -5,7 +5,7 @@ import { StarbrandsRoutingModule } from './starbrands-routing.module';
 import {MenubarModule} from "primeng/menubar";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
-import {StarbrandsListComponent} from "./starbrands-list/starbrands-list.component";
+import {StarbrandsItemComponent} from "./starbrands-item/starbrands-item.component";
 import {StarbrandsComponent} from "./starbrands.component";
 import {RouterModule} from "@angular/router";
 import {CarouselModule} from "primeng/carousel";
@@ -19,7 +19,7 @@ import {FormsModule} from "@angular/forms";
     declarations: [
         HeaderComponent,
         FooterComponent,
-        StarbrandsListComponent,
+        StarbrandsItemComponent,
         StarbrandsComponent],
     exports: [
         HeaderComponent
@@ -32,7 +32,7 @@ import {FormsModule} from "@angular/forms";
         RouterModule,
         CarouselModule,
         ButtonModule,
-        CardModule
+        CardModule,
     ]
 })
 export class StarbrandsModule { }

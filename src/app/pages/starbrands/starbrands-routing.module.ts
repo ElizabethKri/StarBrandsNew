@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {StarbrandsComponent} from "./starbrands.component";
-import {StarbrandsListComponent} from "./starbrands-list/starbrands-list.component";
+import {StarbrandsItemComponent} from "./starbrands-item/starbrands-item.component";
 
 const routes: Routes = [
   {path: '', component: StarbrandsComponent,
   children: [
     {
-      path: 'starbrands-list',
-      component: StarbrandsListComponent
+      path: 'starbrands-item',
+      component: StarbrandsItemComponent
+    },
+    {
+      path: 'product/:id', //путь и параметр
+      loadChildren: () => import('./starbrands-item/starbrands-item.module').then(m => m.StarbrandsItemModule)
     },
   ]}
 ];

@@ -16,9 +16,17 @@ host ::ng-deep {
 
 }
 
+.man{
+  border-style: none;
+}
+
 .img{
   width: 450px;
   height: 400px;
+}
+.imgW{
+  width: 350px;
+  height: 300px;
 }
 
 .p-button{
@@ -46,5 +54,7 @@ host ::ng-deep {
 }
 .woman-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
+

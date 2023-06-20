@@ -18,7 +18,7 @@ export class StarbrandsComponent implements OnInit {
               private productServiceW: WomenService,) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.productService.getProductsSmall().then((products) => {
 
       this.products = products;
