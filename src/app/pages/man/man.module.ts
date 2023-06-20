@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ManRoutingModule } from './man-routing.module';
-import { ManListComponent } from './man-list/man-list.component';
+import { ManItemComponent } from './man-item/man-item.component';
 
 
 @NgModule({
   declarations: [
-    ManListComponent
+    ManItemComponent
   ],
   imports: [
     CommonModule,
