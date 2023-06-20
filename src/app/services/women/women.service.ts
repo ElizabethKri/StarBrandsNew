@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WomenService {
-  getManProductsData(){
+  getWomenProductsData(){
     return [
       {
         "model": "FURLA 1927",
@@ -483,9 +483,7 @@ export class WomenService {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
         "price": "руб 32.000,00",
-        "priceSale": "руб 25.600,00",
         "color": "Цвет: Cactus",
-        "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -515,9 +513,7 @@ export class WomenService {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
         "price": "руб 32.000,00",
-        "priceSale": "руб 25.600,00",
         "color": "Цвет: Cameo",
-        "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -547,9 +543,7 @@ export class WomenService {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
         "price": "руб 32.000,00",
-        "priceSale": "руб 25.600,00",
         "color": "Цвет: Nero",
-        "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -792,6 +786,6 @@ export class WomenService {
   constructor() { }
 
   getProductsW() {
-    return Promise.resolve(this.getManProductsData());
+    return Promise.resolve(this.getWomenProductsData());
   }
 }

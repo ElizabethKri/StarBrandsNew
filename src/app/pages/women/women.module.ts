@@ -2,13 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { WomenRoutingModule } from './women-routing.module';
+import {WomenComponent} from "./women.component";
+import {StarbrandsModule} from "../starbrands/starbrands.module";
+import {ButtonModule} from "primeng/button";
+import {CardModule} from "primeng/card";
+import {FormsModule} from "@angular/forms";
+import {AsideComponent} from "../starbrands/aside/aside.component";
+
 
 
 @NgModule({
-  declarations: [],
+    declarations: [WomenComponent, AsideComponent],
+
   imports: [
     CommonModule,
-    WomenRoutingModule
+    WomenRoutingModule,
+    StarbrandsModule,
+    ButtonModule,
+    CardModule,
+    FormsModule
   ]
 })
 export class WomenModule { }

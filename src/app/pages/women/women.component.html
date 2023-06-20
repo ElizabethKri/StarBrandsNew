@@ -1,3 +1,36 @@
-<div class="d-flex flex-column col-6 m-auto">
-  <app-header></app-header>
+<div class="d-flex flex-column h-100">
+  <header>
+    <app-header></app-header>
+  </header>
+  <div class="main-content d-flex h-50 main-content">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    <div>
+      <app-aside></app-aside>
+    </div>
+    <ng-container>
+      <h1 class="text">Коллекция для женщин</h1>
+      <div class="col-3 m-2 flex-wrap woman-list">
+        <p-card *ngFor="let item of productsW"  [style]="{ width: '350px' }">
+          <ng-template let-product pTemplate="header">
+            <p>{{ item.module }}</p>
+            <p>{{ item.name }}</p>
+            <img class="imgW" alt="Card" src="/assets/img/women/{{ item.img }}" />
+          </ng-template>
+          <p class="mb-1">{{ item.price}}</p>
+          <p class="mb-1">{{ item.priceSale}}</p>
+          <p class="mb-1">{{ item.collectionNew}}</p>
+          <p class="mb-1">{{ item.collectionSale}}</p>
+          <ng-template pTemplate="footer">
+            <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
+            <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+          </ng-template>
+        </p-card>
+      </div>
+    </ng-container>
+  </div>
+  <footer>
+  <app-footer></app-footer>
+  </footer>
 </div>
