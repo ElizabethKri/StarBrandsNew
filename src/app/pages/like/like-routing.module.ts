@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {LikeComponent} from "./like.component";
 
-const routes: Routes = [];
+const routes: Routes = [{path: '', component: LikeComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

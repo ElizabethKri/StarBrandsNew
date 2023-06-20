@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ManRoutingModule } from './man-routing.module';
-import { ManItemComponent } from './man-item/man-item.component';
+import {StarbrandsModule} from "../starbrands/starbrands.module";
+import {ManComponent} from "./man.component";
 
 
 @NgModule({
   declarations: [
-    ManItemComponent
+    ManComponent
   ],
   imports: [
     CommonModule,
-    ManRoutingModule
+    ManRoutingModule,
+    StarbrandsModule
   ]
 })
 export class ManModule { }
