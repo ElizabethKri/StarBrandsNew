@@ -1,8 +1,6 @@
 <div class="d-flex flex-column h-100">
-  <header>
-    <app-header></app-header>
-  </header>
-  <div class="product-item col-3 m-2"
+  <a routerLink="/starbrands/starbrands-list">Назад</a>
+  <div class="product-item col-2 m-3 mt-4"
        (click)="goToProductInfoPage(item)"
        *ngFor="let item of products; let i = index">
     <div class="product-title">{{item.model}}</div>
