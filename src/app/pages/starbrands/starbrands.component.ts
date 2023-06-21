@@ -18,6 +18,7 @@ export class StarbrandsComponent implements OnInit {
   constructor(
               private productNewManService: NewService,
               private productNewWomenService: NewService,
+              private router: Router
               ) {
   }
 
@@ -33,4 +34,11 @@ export class StarbrandsComponent implements OnInit {
       console.log('this.products', this.products)
     });
   }
+
+
+  goToProductInfoPage(item: Products){
+    console.log('dd')
+    this.router.navigate([`/starbrands/product/${item.productId}`])
+  }
 }
+

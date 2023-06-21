@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', component: StarbrandsComponent,
   children: [
     {
-      path: 'starbrands-item',
+      path: 'starbrands-item/:id',
       component: StarbrandsItemComponent
     },
     {

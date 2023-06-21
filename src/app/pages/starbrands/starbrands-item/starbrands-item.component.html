@@ -1,15 +1,14 @@
 <div class="d-flex flex-column h-100">
   <a routerLink="/starbrands/starbrands-list">Назад</a>
   <div class="product-item col-2 m-3 mt-4"
-       (click)="goToProductInfoPage(item)"
-       *ngFor="let item of products; let i = index">
-    <div class="product-title">{{item.model}}</div>
-    <div class="product-title">{{item.name}}</div>
-    <div class="product-title">{{item.price}}</div>
-    <div class="product-title">{{item.color}}</div>
+>
+    <div class="product-title">{{productItem.model}}</div>
+    <div class="product-title">{{productItem.name}}</div>
+    <div class="product-title">{{productItem.price}}</div>
+    <div class="product-title">{{productItem.color}}</div>
     <div class="ticket-img">
-      <img class="w-100" src="/assets/img {{item.img}}">
+      <img class="w-100" src="/assets/img/women/{{productItem.img}}">
     </div>
-    <div >{{item.description}}</div>
+    <div >{{productItem.description}}</div>
   </div>
 </div>
