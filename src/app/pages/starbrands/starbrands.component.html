@@ -33,13 +33,15 @@
       <ng-container>
         <h1 class="text">Новая коллекция для женщин</h1>
         <div class="col-4 m-2 flex-wrap woman-list">
-          <p-card *ngFor="let item of productsW"  [style]="{ width: '350px' }">
+          <p-card        (click)="goToProductInfoPage(item)"
+            *ngFor="let item of productsW"  [style]="{ width: '350px' }">
             <ng-template let-product pTemplate="header">
               <p>{{ item.module }}</p>
               <p>{{ item.name }}</p>
               <img class="imgW" alt="Card" src="/assets/img/women/{{ item.img }}" />
             </ng-template>
             <p class="mb-1">{{ item.price}}</p>
+            <h6 class="mt-0 mb-3">{{item.collectionNew}}</h6>
             <ng-template pTemplate="footer">
               <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
               <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
