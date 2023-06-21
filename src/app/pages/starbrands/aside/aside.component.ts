@@ -10,7 +10,7 @@ import {TreeNode} from "primeng/api";
 })
 export class AsideComponent implements OnInit{
   files!: TreeNode[];
-  selectedFiles!: TreeNode[];
+  selectedFiles!: TreeNode<any> | TreeNode<any>[];
 
   constructor(private nodeService: NodeManService) { }
 

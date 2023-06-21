@@ -14,6 +14,14 @@ const routes: Routes = [
       path: 'product/:id', //путь и параметр
       loadChildren: () => import('./starbrands-item/starbrands-item.module').then(m => m.StarbrandsItemModule)
     },
+    {
+      path: 'woman',
+      loadChildren: () => import('../women/women.module').then(m => m.WomenModule)
+    },
+    {
+      path: 'man',
+      loadChildren: () => import('../man/man.module').then(m => m.ManModule)
+    },
   ]}
 ];
 

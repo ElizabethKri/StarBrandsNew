@@ -8,6 +8,10 @@ import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {FormsModule} from "@angular/forms";
 import {AsideComponent} from "../starbrands/aside/aside.component";
+import {TreeModule} from "primeng/tree";
+import {DropdownModule} from "primeng/dropdown";
+import {HeaderComponent} from "../starbrands/header/header.component";
+import {FooterComponent} from "../starbrands/footer/footer.component";
 
 
 
@@ -20,7 +24,10 @@ import {AsideComponent} from "../starbrands/aside/aside.component";
     StarbrandsModule,
     ButtonModule,
     CardModule,
-    FormsModule
+    FormsModule,
+    DropdownModule,
+    TreeModule
   ]
 })
 export class WomenModule { }
+

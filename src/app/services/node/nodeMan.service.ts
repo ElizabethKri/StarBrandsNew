@@ -56,7 +56,5 @@ export class NodeManService {
       ]
   }
 
-  getFiles() {
-    return Promise.resolve(this.getTreeNodesDataMan());
-  }
 }
+

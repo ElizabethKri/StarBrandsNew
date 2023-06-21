@@ -25,15 +25,15 @@ export class HeaderComponent implements OnInit{
     this.items = [
       {
         label: 'Главная',
-        routerLink: ['/starbrands'],
+        routerLink: ['/starbrands']
       },
       {
         label: 'Для женщин',
-        routerLink: ['/women'],
+        routerLink: ['woman'],
           },
           {
             label: 'Для мужчин',
-            routerLink: ['/man'],
+            routerLink: ['man'],
           },
           {
             label: 'Sale',

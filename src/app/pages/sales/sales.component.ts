@@ -23,13 +23,13 @@ export class SalesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.productSaleManService.getManSaleProductsData().then((productsM) => {
+    this.productSaleManService.getProductsSaleM().then((productsM) => {
 
       this.productsM = productsM;
       console.log('this.products', this.products)
     });
 
-    this.productSaleWomenService.getWomenSaleProductsData().then((productsW) => {
+    this.productSaleWomenService.getProductsSaleW().then((productsW) => {
 
       this.productsW = productsW;
       console.log('this.products', this.products)
