@@ -190,7 +190,7 @@ export class NewService {
 
   }
 
-  getWomenNewProductsData(){
+  getWomenNewProductsData() {
     return [
       {
         "model": "FURLA 1927",
