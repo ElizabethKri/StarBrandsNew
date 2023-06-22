@@ -7,9 +7,10 @@
       <app-aside></app-aside>
     </div>
     <ng-container>
+      <div class=" h-50">
       <h1 class="text">Коллекция для женщин</h1>
-      <div class="col-3 m-2 flex-wrap woman-list">
-        <p-card *ngFor="let item of productsW"  [style]="{ width: '350px' }">
+      <div class="m-2 flex-wrap woman-list">
+        <p-card *ngFor="let item of productsW"  [style]="{ width: '350px', height: '600px' }">
           <ng-template let-product pTemplate="header">
             <p>{{ item.module }}</p>
             <p>{{ item.name }}</p>
@@ -24,6 +25,7 @@
             <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
           </ng-template>
         </p-card>
+      </div>
       </div>
     </ng-container>
   </div>
