@@ -1,0 +1,59 @@
+host ::ng-deep {
+  .product-item {
+    .product-item-content {
+      border: 1px solid var(--surface-d);
+      border-radius: 3px;
+      margin: .3rem;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .product-image {
+      width: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+    }
+  }
+
+}
+
+.man{
+  border-style: none;
+}
+
+.img{
+  width: 450px;
+  height: 400px;
+}
+.imgW{
+  width: 350px;
+  height: 300px;
+}
+
+.p-button{
+  margin: 2rem;
+}
+
+.text{
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.main-content{
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  & > div {
+    width: 100%;
+  }
+}
+.woman-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
