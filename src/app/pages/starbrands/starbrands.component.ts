@@ -16,29 +16,15 @@ export class StarbrandsComponent implements OnInit {
   productsW: any []
 
   constructor(
-              private productNewManService: NewService,
-              private productNewWomenService: NewService,
-              private router: Router
-              ) {
+    private productNewManService: NewService,
+    private productNewWomenService: NewService,
+    private router: Router
+  ) {
   }
 
   ngOnInit(): void {
-    this.productNewManService.getProductsSmall().then((products) => {
+    this.router.navigate(['/starbrands/main'])
 
-      this.products = products;
-      console.log('this.products', this.products)
-    });
-    this.productNewWomenService.getProductsNewW().then((productsW) => {
-
-      this.productsW = productsW;
-      console.log('this.products', this.products)
-    });
-  }
-
-
-  goToProductInfoPage(item: Products){
-    console.log('dd')
-    this.router.navigate([`/starbrands/product/${item.productId}`])
   }
 }
 

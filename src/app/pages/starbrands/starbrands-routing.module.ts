@@ -22,7 +22,12 @@ const routes: Routes = [
       path: 'man',
       loadChildren: () => import('../man/man.module').then(m => m.ManModule)
     },
-  ]}
+
+    {path: 'main',
+      loadChildren: () => import('../main/main.module').then(m => m.MainModule)
+    }
+  ]},
+
 ];
 
 @NgModule({
