@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ManRoutingModule } from './man-routing.module';
 import {StarbrandsModule} from "../starbrands/starbrands.module";
 import {ManComponent} from "./man.component";
+import {ButtonModule} from "primeng/button";
+import {CardModule} from "primeng/card";
+import {FormsModule} from "@angular/forms";
+import {DropdownModule} from "primeng/dropdown";
+import {TreeModule} from "primeng/tree";
 
 
 @NgModule({
@@ -12,7 +17,11 @@ import {ManComponent} from "./man.component";
   imports: [
     CommonModule,
     ManRoutingModule,
-    StarbrandsModule
+    ButtonModule,
+    CardModule,
+    FormsModule,
+    DropdownModule,
+    TreeModule
   ]
 })
 export class ManModule { }

@@ -1,8 +1,29 @@
 <div class="d-flex flex-column h-100">
-
-  <div class="main-content d-flex h-50 main-content">
+  <div class="main-content d-flex h-50">
     <div>
       <router-outlet></router-outlet>
     </div>
+    <ng-container>
+      <div class=" h-50">
+        <h1 class="text">Коллекция для мужчин</h1>
+        <div class="m-2 flex-wrap woman-list">
+          <p-card *ngFor="let item of productsM"  [style]="{ width: '350px', height: '600px' }">
+            <ng-template let-product pTemplate="header">
+              <p>{{ item.module }}</p>
+              <p>{{ item.name }}</p>
+              <img class="imgW" alt="Card" src="/assets/img/man/{{ item.img }}" />
+            </ng-template>
+            <p class="mb-1">{{ item.price}}</p>
+            <p class="mb-1">{{ item.priceSale}}</p>
+            <p class="mb-1">{{ item.collectionNew}}</p>
+            <p class="mb-1">{{ item.collectionSale}}</p>
+            <ng-template pTemplate="footer">
+              <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
+              <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            </ng-template>
+          </p-card>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
