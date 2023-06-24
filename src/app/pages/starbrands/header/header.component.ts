@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit{
           {
             label: 'Sale',
             icon: 'pi pi-bolt',
-            routerLink: ['/sales'],
+            routerLink: ['sales'],
           },
       {
         label: 'Профиль',
@@ -65,13 +65,13 @@ export class HeaderComponent implements OnInit{
       {
         label: 'Нравится',
         icon: 'pi pi-heart-fill',
-        routerLink: ['/likes'],
+        routerLink: ['likes'],
       },
 
       {
         label: 'Корзина',
         icon: 'pi pi-shopping-bag',
-        routerLink: ['/basket'],
+        routerLink: ['basket'],
       },
     ];
   }
