@@ -22,6 +22,18 @@ const routes: Routes = [
       path: 'man',
       loadChildren: () => import('../man/man.module').then(m => m.ManModule)
     },
+    {
+      path: 'sales',
+      loadChildren: () => import('../sales/sales.module').then(m => m.SalesModule)
+    },
+    {
+      path: 'like',
+      loadChildren: () => import('../like/like.module').then(m => m.LikeModule)
+    },
+    {
+      path: 'basket',
+      loadChildren: () => import('../basket/basket.module').then(m => m.BasketModule)
+    },
 
     {path: 'main',
       loadChildren: () => import('../main/main.module').then(m => m.MainModule)
