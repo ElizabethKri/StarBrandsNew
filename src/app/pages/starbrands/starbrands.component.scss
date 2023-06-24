@@ -47,7 +47,6 @@ host ::ng-deep {
 .main-content{
   flex: 1;
   display: flex;
-  overflow: auto;
   & > div {
     width: 100%;
   }
