@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 
 import {RouterModule} from "@angular/router";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
