@@ -35,10 +35,6 @@ export class MainComponent implements OnInit{
     });
   }
 
-
-
-
-
 goToProductInfoPage(item: Products){
   console.log('dd')
   this.router.navigate([`/starbrands/product/${item.productId}`])
