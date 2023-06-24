@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ManService} from "../../services/man/man.service";
 import {WomenService} from "../../services/women/women.service";
-import {NewService} from "../../services/new/new.service";
+
 
 @Component({
   selector: 'app-women',
