@@ -7,6 +7,7 @@ import {StarbrandsModule} from "../starbrands/starbrands.module";
 import {FormsModule} from "@angular/forms";
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
+import {CarouselModule} from "primeng/carousel";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {CardModule} from "primeng/card";
     StarbrandsModule,
     FormsModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    CarouselModule
   ]
 })
 export class SalesModule { }
