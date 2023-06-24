@@ -1,14 +1,23 @@
-<div class="d-flex flex-column h-100">
-  <a routerLink="/starbrands/starbrands-list">Назад</a>
-  <div class="product-item col-2 m-3 mt-4"
->
+<div class="h-100">
+  <a routerLink="/starbrands/main">Назад</a>
+  <div class="main">
+    <div class="product-img">
+      <img class="h-100"  style="width: 770px" src="/assets/img/women/{{productItem.img}}">
+    </div>
+    <div class="flex-wrap main-content">
+  <div class="product-item col-2 m-3 mt-4">
     <div class="product-title">{{productItem.model}}</div>
     <div class="product-title">{{productItem.name}}</div>
     <div class="product-title">{{productItem.price}}</div>
     <div class="product-title">{{productItem.color}}</div>
-    <div class="ticket-img">
-      <img class="w-100" src="/assets/img/women/{{productItem.img}}">
+  </div>
+  <div>
+    <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
+    <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+  </div>
+  <div>
+    <div class="description">{{productItem.description}}</div>
+  </div>
     </div>
-    <div >{{productItem.description}}</div>
   </div>
 </div>

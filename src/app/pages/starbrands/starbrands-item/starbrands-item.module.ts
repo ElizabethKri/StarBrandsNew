@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StarbrandsItemRoutingModule } from './starbrands-item-routing.module';
 import {StarbrandsItemComponent} from "./starbrands-item.component";
+import {ButtonModule} from "primeng/button";
 
 
 
@@ -9,7 +10,8 @@ import {StarbrandsItemComponent} from "./starbrands-item.component";
   declarations: [],
   imports: [
     CommonModule,
-    StarbrandsItemRoutingModule
+    StarbrandsItemRoutingModule,
+    ButtonModule
   ]
 })
 export class StarbrandsItemModule { }
