@@ -13,7 +13,7 @@
             <h6 class="mt-0 mb-3">{{product.price}}</h6>
             <h6 class="mt-0 mb-3">{{product.collectionNew}}</h6>
             <div class="car-buttons mt-5">
-              <p-button type="button" label="Нравится" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
+              <p-button type="button" label="Подробнее" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
               <p-button type="button" label="Корзина" (click)="addtocart(product)" styleClass="p-button-success p-button mr-2" icon="pi pi-shopping-bag"></p-button>
             </div>
           </div>
@@ -25,7 +25,7 @@
 <ng-container>
   <h1 class="text">Новая коллекция для женщин</h1>
   <div class="col-4 m-2 flex-wrap woman-list">
-    <p-card        (click)="goToProductInfoPage(item)"
+    <p-card
                    *ngFor="let item of productsW"  [style]="{ width: '350px' }">
       <ng-template let-product pTemplate="header">
         <p>{{ item.module }}</p>
@@ -35,7 +35,7 @@
       <p class="mb-1">{{ item.price}}</p>
       <h6 class="mt-0 mb-3">{{item.collectionNew}}</h6>
       <ng-template pTemplate="footer">
-        <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
+        <p-button label="Подробнее" (click)="goToProductInfoPage(item)"  icon="pi pi-heart-fill"></p-button>
         <p-button label="Корзина" (click)="addtocart(item)"  icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
       </ng-template>
     </p-card>
