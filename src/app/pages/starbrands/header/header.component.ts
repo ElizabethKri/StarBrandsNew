@@ -3,6 +3,7 @@ import {MenuItem} from "primeng/api";
 import {debounceTime, fromEvent, Subject, takeUntil} from "rxjs";
 import {Products} from "../../../interface/products";
 import {AllproductsService} from "../../../services/allproducts/allproducts.service";
+import {BasketService} from "../../../services/basket/basket.service";
 
 
 @Component({
@@ -16,12 +17,19 @@ export class HeaderComponent implements OnInit{
   productSearchValue: string;
   destroyer = new Subject();
   products: any [];
+  totalItem: number = 0;
 
-  constructor( private productsAll: AllproductsService){}
+  constructor( private productsAll: AllproductsService, private basketService: BasketService){}
 
   items: MenuItem[];
 
   ngOnInit() {
+
+    //выводить номер на корзине
+    this.basketService.getProduct().subscribe(res =>{
+      this.totalItem = res.length
+    })
+
     this.items = [
       {
         label: 'Главная',

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Products} from "../../interface/products";
 import {NewService} from "../../services/new/new.service";
 import {Router} from "@angular/router";
+import {BasketService} from "../../services/basket/basket.service";
 
 @Component({
   selector: 'app-main',
@@ -12,10 +13,12 @@ export class MainComponent implements OnInit{
   products: any[];
   responsiveOptions: any[];
   productsW: any []
+  public productList: any;
   constructor(
     private productNewManService: NewService,
     private productNewWomenService: NewService,
-    private router: Router
+    private router: Router,
+    private basketService: BasketService,
   ) {
   }
 
@@ -33,12 +36,20 @@ export class MainComponent implements OnInit{
       this.productsW = productsW;
       console.log('this.products', this.products)
     });
+
+    this.productList.forEach((a: any)=> {
+      Object.assign(a, {quantity: 1, total: a.price})
+    })
   }
 
 goToProductInfoPage(item: Products){
   console.log('dd')
   this.router.navigate([`/starbrands/product/${item.productId}`])
-}
+};
+
+  addtocart(item: any){
+    this.basketService.addtoCart(item)
+  }
 
 
 }

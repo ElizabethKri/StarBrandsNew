@@ -4,6 +4,7 @@
       <ng-template pTemplate="start">
         <img src="assets/img/logo_icon.png" height="40" class="mr-2" />
       </ng-template>
+      <div style="font-size: 10px" class="badge bg-danger">{{totalItem}}</div>
       <ng-template pTemplate="end">
         <input #productSearch [(ngModel)]= "productSearchValue" type="text" pInputText  placeholder="Хочу купить" class="w-full" />
       </ng-template>

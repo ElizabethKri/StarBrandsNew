@@ -14,7 +14,7 @@
             <h6 class="mt-0 mb-3">{{product.collectionNew}}</h6>
             <div class="car-buttons mt-5">
               <p-button type="button" label="Нравится" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
-              <p-button type="button" label="Корзина" styleClass="p-button-success p-button mr-2" icon="pi pi-shopping-bag"></p-button>
+              <p-button type="button" label="Корзина" (click)="addtocart(product)" styleClass="p-button-success p-button mr-2" icon="pi pi-shopping-bag"></p-button>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
       <h6 class="mt-0 mb-3">{{item.collectionNew}}</h6>
       <ng-template pTemplate="footer">
         <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
-        <p-button label="Корзина" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+        <p-button label="Корзина" (click)="addtocart(item)"  icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
       </ng-template>
     </p-card>
   </div>
