@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MenuItem} from "primeng/api";
 import {debounceTime, fromEvent, Subject, takeUntil} from "rxjs";
 import {Products} from "../../../interface/products";
+import {AllproductsService} from "../../../services/allproducts/allproducts.service";
 
 
 @Component({
@@ -14,10 +15,9 @@ export class HeaderComponent implements OnInit{
   @ViewChild('productSearch') productSearch: ElementRef;
   productSearchValue: string;
   destroyer = new Subject();
-  productsCopy: Products[];
-  products: Products[];
+  products: any [];
 
-  constructor(){}
+  constructor( private productsAll: AllproductsService){}
 
   items: MenuItem[];
 
@@ -84,14 +84,14 @@ export class HeaderComponent implements OnInit{
     ).subscribe((ev: any) => {
       console.log('ev', ev)
         if (this.productSearchValue) {
-          this.products = this.productsCopy.filter((el) => {
+          this.products = this.productsAll.getAllProductsData().filter((el) => {
             console.log('el', el)
             //проверка на строку, ищет при всех регистрах
             const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase(): '';
             return nameToLower.includes(this.productSearchValue.toLowerCase());
           });
         } else {
-          this.products = [...this.productsCopy]
+          this.products = [...this.productsAll.getAllProductsData()]
         }
       }
     );
