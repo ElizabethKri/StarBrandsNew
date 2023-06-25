@@ -3,6 +3,7 @@ import {Products} from "../../interface/products";
 import {NewService} from "../../services/new/new.service";
 import {Router} from "@angular/router";
 import {BasketService} from "../../services/basket/basket.service";
+import {AllproductsService} from "../../services/allproducts/allproducts.service";
 
 @Component({
   selector: 'app-main',
@@ -19,6 +20,7 @@ export class MainComponent implements OnInit{
     private productNewWomenService: NewService,
     private router: Router,
     private basketService: BasketService,
+    private allproduct: AllproductsService
   ) {
   }
 
