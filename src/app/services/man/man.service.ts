@@ -349,8 +349,8 @@ export class ManService {
       {
         "model": "MAN PROJECT",
         "name": "Визитница S",
-        "price": "руб 7.500,00",
-        "priceSale": "руб 6.000,00",
+        "price": "руб 6.000,00",
+        "priceSale": "руб 7.500,00",
         "color": "Цвет: Praline + Perla + Spritz",
         "size": "S",
         "productId": "1011",
@@ -380,8 +380,8 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Чехол Для Мобильного Телефона Nero",
-        "price": "руб 8.500,00",
-        "priceSale": "руб 6.800,00",
+        "price": "руб 6.800,00",
+        "priceSale": "руб 8.500,00",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1012",

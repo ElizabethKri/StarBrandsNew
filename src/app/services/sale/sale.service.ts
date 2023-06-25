@@ -8,8 +8,8 @@ export class SaleService {
     return [{
       "model": "MAN PROJECT",
       "name": "Визитница S",
-      "price": "руб 7.500,00",
-      "priceSale": "руб 6.000,00",
+      "price": "руб 6.000,00",
+      "priceSale": "руб 7.500,00",
       "color": "Цвет: Praline + Perla + Spritz",
       "size": "S",
       "productId": "1011",
@@ -39,8 +39,8 @@ export class SaleService {
       {
         "model": "MAN COSMO",
         "name": "Чехол Для Мобильного Телефона Nero",
-        "price": "руб 8.500,00",
-        "priceSale": "руб 6.800,00",
+        "price": "руб 6.800,00",
+        "priceSale": "руб 8.500,00",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1012",
@@ -75,8 +75,8 @@ export class SaleService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 39.000,00",
-        "priceSale": "руб 31.200,00",
+        "price": "руб 31.200,00",
+        "priceSale": "руб 39.000,00",
         "color": "Цвет: Fullmoon",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -110,8 +110,8 @@ export class SaleService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 39.000,00",
-        "priceSale": "руб 31.200,00",
+        "price": "руб 31.200,00",
+        "priceSale": "руб 39.000,00",
         "color": "Цвет: Greige",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -144,8 +144,8 @@ export class SaleService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 38.500,00",
-        "priceSale": "руб 30.800,00",
+        "price": "руб 30.800,00",
+        "priceSale": "руб 38.500,00",
         "collectionSale": "Sale",
         "color": "Цвет: Talco H",
         "description": "ОПИСАНИЕ\n" +
@@ -173,8 +173,8 @@ export class SaleService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 38.500,00",
-        "priceSale": "руб 30.800,00",
+        "price": "руб 30.800,00",
+        "priceSale": "руб 38.500,00",
         "color": "Цвет: Soil",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -202,8 +202,8 @@ export class SaleService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 38.500,00",
-        "priceSale": "руб 30.800,00",
+        "price": "руб 30.800,00",
+        "priceSale": "руб 38.500,00",
         "color": "Цвет: Ballerina I",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -231,8 +231,8 @@ export class SaleService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 38.500,00",
-        "priceSale": "руб 30.800,00",
+        "price": "руб 30.800,00",
+        "priceSale": "руб 38.500,00",
         "color": "Цвет: Ciliegia D",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +

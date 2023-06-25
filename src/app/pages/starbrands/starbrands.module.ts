@@ -12,6 +12,7 @@ import {CarouselModule} from "primeng/carousel";
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {FormsModule} from "@angular/forms";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 
@@ -34,6 +35,7 @@ import {FormsModule} from "@angular/forms";
         CarouselModule,
         ButtonModule,
         CardModule,
+        FontAwesomeModule,
     ]
 })
 export class StarbrandsModule { }
