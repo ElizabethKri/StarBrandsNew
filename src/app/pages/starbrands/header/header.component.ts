@@ -70,11 +70,6 @@ export class HeaderComponent implements OnInit{
           }
         ]
       },
-      {
-        label: 'Нравится',
-        icon: 'pi pi-heart-fill',
-        routerLink: ['likes'],
-      },
 
       {
         label: 'Корзина',
