@@ -20,9 +20,6 @@ const routes: Routes = [
   {path: 'sale',
     loadChildren: () => import('./pages/sales/sales.module').then(m => m.SalesModule)
   },
-  {path: 'like',
-    loadChildren: () => import('./pages/like/like.module').then(m => m.LikeModule)
-  },
   {path: 'basket',
     loadChildren: () => import('./pages/basket/basket.module').then(m => m.BasketModule)
   },
