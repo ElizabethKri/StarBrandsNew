@@ -56,3 +56,8 @@ host ::ng-deep {
   width: 100%;
   justify-content: space-evenly;
 }
+
+.del {
+  text-decoration: line-through;
+  text-decoration-color: black;
+}

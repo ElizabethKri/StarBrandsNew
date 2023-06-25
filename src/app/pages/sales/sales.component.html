@@ -14,7 +14,7 @@
             <h4 class="mb-1">{{ product.module }}</h4>
             <h4 class="mb-1">{{ product.name }}</h4>
             <h6 class="mt-0 mb-3">{{product.price}}</h6>
-            <h6 class="mt-0 mb-3">{{product.priceSale}}</h6>
+            <h6 class="mt-0 mb-3 del">{{product.priceSale}}</h6>
             <h6 class="mt-0 mb-3">{{product.collectionSale}}</h6>
             <div class="car-buttons mt-5">
               <p-button type="button" label="Нравится" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
@@ -36,7 +36,7 @@
         <img class="imgW" alt="Card" src="/assets/img/man/{{ item.img }}" />
       </ng-template>
       <p class="mb-1">{{ item.price}}</p>
-      <p class="mb-1">{{ item.priceSale}}</p>
+      <p class="mb-1 del">{{ item.priceSale}}</p>
       <p class="mb-1">{{ item.collectionSale}}</p>
       <ng-template pTemplate="footer">
         <p-button label="Нравится" icon="pi pi-heart-fill"></p-button>
