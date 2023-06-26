@@ -34,11 +34,17 @@ export class BasketService {
     return grandTotal;
   }
   removeCartItem(product: any){
-    this.cartItemList.map((a: any, index: any) =>{
-      if(product.id === a.id){
-        this.cartItemList.splice(index, 1);
-      }
-    })
+    console.log('cartItemList', this.cartItemList)
+    const indexToRemove = this.cartItemList.findIndex((el) => el.productId === product.productId);
+
+    if (indexToRemove !== -1) {
+      this.cartItemList.splice(indexToRemove, 1);
+    }
+    // this.cartItemList.map((a: any, index: any) =>{
+    //   if(product.id === a.id){
+    //     this.cartItemList.splice(index, 1);
+    //   }
+    // })
     this.productList.next(this.cartItemList)
   }
 
