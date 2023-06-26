@@ -24,7 +24,7 @@ export class StarbrandsItemComponent implements  OnInit{
      this.newService.getProductsNewW().then((data: any) => {
        this.products = data;
 
-       this.productItem = this.products.find(el => el.productId = cardId)
+       this.productItem = this.products.find(el => el.productId === cardId)
      })
 
 
