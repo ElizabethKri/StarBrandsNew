@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject, Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AllproductsService {
+  private searchSubject = new BehaviorSubject(null);
+  readonly searchSubject$ = this.searchSubject.asObservable();
+
+  sendSearchText(val:string | null): void {
+    this.searchSubject.next(val);
+  }
   getAllProductsData() {
     return [
       {
@@ -1192,5 +1199,13 @@ export class AllproductsService {
 
   getProducts() {
     return Promise.resolve(this.getAllProductsData());
+  }
+
+  filterProductData(data, searchVal: string) {
+    return data.filter((el) => {
+      //проверка на строку, ищет при всех регистрах
+      const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase(): '';
+      return nameToLower.includes(searchVal.toLowerCase());
+    });
   }
 }

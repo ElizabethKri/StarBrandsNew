@@ -13,7 +13,11 @@ import {AllproductsService} from "../../services/allproducts/allproducts.service
 export class MainComponent implements OnInit{
   products: any[];
   responsiveOptions: any[];
-  productsW: any []
+  productsW: any [];
+  copyObj = {
+    sliderArr: [],
+    productArr: []
+  }
   public productList: any;
   constructor(
     private productNewManService: NewService,
@@ -29,6 +33,7 @@ export class MainComponent implements OnInit{
     this.productNewManService.getProductsSmall().then((products) => {
 
       this.products = products;
+      this.copyObj.sliderArr = [...products];
       console.log('this.products', this.products)
     });
 
@@ -36,11 +41,26 @@ export class MainComponent implements OnInit{
     this.productNewWomenService.getProductsNewW().then((productsW) => {
 
       this.productsW = productsW;
+      this.copyObj.productArr = [...productsW];
+
       console.log('this.products', this.products)
     });
 
-    this.productList.forEach((a: any)=> {
-      Object.assign(a, {quantity: 1, total: a.price})
+    // this.productList.forEach((a: any)=> {
+    //   Object.assign(a, {quantity: 1, total: a.price})
+    // })
+
+
+    this.allproduct.searchSubject$.subscribe((searchVal: string) => {
+      console.log('searchVal**', searchVal)
+      if (searchVal) {
+        this.productsW = this.allproduct.filterProductData(this.copyObj.productArr, searchVal);
+        this.products = this.allproduct.filterProductData(this.copyObj.sliderArr, searchVal);
+      } else {
+        this.productsW = [...this.copyObj.productArr];
+        this.products = [...this.copyObj.sliderArr];
+      }
+
     })
   }
 

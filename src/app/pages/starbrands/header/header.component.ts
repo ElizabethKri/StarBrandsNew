@@ -85,17 +85,8 @@ export class HeaderComponent implements OnInit{
       debounceTime(200),
       takeUntil(this.destroyer)
     ).subscribe((ev: any) => {
-      console.log('ev', ev)
-        if (this.productSearchValue) {
-          this.products = this.productsAll.getAllProductsData().filter((el) => {
-            console.log('el', el)
-            //проверка на строку, ищет при всех регистрах
-            const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase(): '';
-            return nameToLower.includes(this.productSearchValue.toLowerCase());
-          });
-        } else {
-          this.products = [...this.productsAll.getAllProductsData()]
-        }
+      console.log(this.productSearchValue)
+      this.productsAll.sendSearchText(this.productSearchValue);
       }
     );
   }
