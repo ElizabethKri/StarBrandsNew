@@ -10,8 +10,6 @@
             <th>Модель</th>
             <th>Изображение</th>
             <th>Цена</th>
-            <th>Количество</th>
-            <th>Итого</th>
             <th>Действие</th>
           </tr>
           </thead>
@@ -21,9 +19,7 @@
             <td>{{item.name}}</td>
             <td>{{item.model}}</td>
             <td><img style = "width:120px" src="/assets/img/all/{{item.img}}"></td>
-            <td>{{item.price}}</td>
-            <td>{{item.quantity}}</td>
-            <td>{{item.total}}</td>
+            <td>{{item.price}} руб.</td>
             <td>
               <button (click)="removeItem(item)" class = "btn btn-danger">Удалить</button>
             </td>
@@ -33,7 +29,7 @@
             <td><button (click)="emptycart()" class="btn-danger btn">Очистить корзину</button></td>
             <td><button routerLink = '/starbrands/main' class="btn-primary btn">Покупка товара</button></td>
             <td><button routerLink = '/starbrands/order' class="btn-success btn">Оформить заказ</button></td>
-            <td><strong>Итого: {{grandTotal}}</strong></td>
+            <td><strong>Итого: {{grandTotal}} руб.</strong></td>
           </tr>
           </tbody>
         </table>
