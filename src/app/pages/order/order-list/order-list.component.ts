@@ -15,7 +15,7 @@ export class OrderListComponent implements OnInit{
   ngOnInit(): void{
     setTimeout(() => {
       this.router.navigate(["/starbrands/main"])
-    }, 4000);
+    }, 6000);
 
     this.grandTotal = this.basketService.getTotalPrice();
   }
