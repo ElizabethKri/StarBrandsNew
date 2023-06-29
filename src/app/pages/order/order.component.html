@@ -1,10 +1,10 @@
-
-<div class="mt-5">
+<a routerLink="/starbrands/basket" style="padding: 50px">Назад</a>
+<div class="mt-5" style="text-align: center">
   <h1 class = "text">Оформление заказа</h1>
   <form class = "d-flex   m-auto registration-input-wrap  md:flex-row gap-3 user-info card" [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div>
       <h2>Итого</h2>
-      <strong style = "font-size: 35px; color: green">{{grandTotal}} руб.</strong>
+      <strong style = "font-size: 35px; color: green">{{total}} руб.</strong>
     </div>
     <div class = "mt-3">
       <!--          <span class="mx-3">Имя</span>-->
@@ -12,7 +12,8 @@
       <input type="text"
              class="mt-3"
              pInputText
-             formControlName = "firstName"/>
+             formControlName = "firstName"
+             placeholder="Имя"/>
     </div>
 
     <div class = "mt-3">
@@ -21,7 +22,8 @@
       <input type="text"
              class="mt-3"
              pInputText
-             formControlName = "lastName"/>
+             formControlName = "lastName"
+             placeholder="Фамилия"/>
     </div>
 
     <div class = "mt-3">
@@ -47,9 +49,10 @@
     <div class = "mt-3">
     <textarea
       type="text"
-      class="mt-3"
+      class="mt-3 address"
       pInputText
-      formControlName = "adress"></textarea>
+      formControlName = "adress"
+      placeholder="г.Москва, Народная, д. 5, кв. 101"></textarea>
   </div>
 
 
@@ -57,8 +60,9 @@
       <button
         routerLink = '/starbrands/order-list'
         (click)="onSubmit()"
-              type="button"
-              class="btn btn-success">
+        [disabled]="this.userForm.invalid"
+        type="button"
+        class="btn btn-success">
         Оформить заказ</button>&nbsp;
       <button
         routerLink = '/starbrands/main'
