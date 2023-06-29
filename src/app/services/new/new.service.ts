@@ -10,7 +10,7 @@ export class NewService {
       {
       "model": "MAN COSMO",
       "name": "Сумка Кросс-Боди S",
-      "price": "руб 26.500,00",
+      "price": "26.500",
       "color": "Цвет: Spriz + Nero",
       "collectionNew": "New collection",
       "size": "S",
@@ -39,7 +39,7 @@ export class NewService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1001",
@@ -68,7 +68,7 @@ export class NewService {
       {
         "model": "FURLA MAN GIOVE",
         "name": "Сумка-Торба, Мини-Формат",
-        "price": "руб 22.500,00",
+        "price": "22.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1002",
@@ -98,7 +98,7 @@ export class NewService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Toni Caffe",
         "size": "S",
         "productId": "1003",
@@ -129,7 +129,7 @@ export class NewService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Nero",
         "size": "M",
         "productId": "1004",
@@ -159,7 +159,7 @@ export class NewService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Stone",
         "size": "M",
         "productId": "1005",
@@ -195,7 +195,7 @@ export class NewService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "34.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -227,7 +227,7 @@ export class NewService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "34.500",
         "color": "Цвет: Fullmoon",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -259,7 +259,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -291,7 +291,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -323,7 +323,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -355,7 +355,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -387,7 +387,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -419,7 +419,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Mineral Green",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -451,7 +451,7 @@ export class NewService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +

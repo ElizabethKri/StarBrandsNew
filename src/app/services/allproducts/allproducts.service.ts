@@ -16,7 +16,7 @@ export class AllproductsService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "34.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -48,7 +48,7 @@ export class AllproductsService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "34.500",
         "color": "Цвет: Fullmoon",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -80,7 +80,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -112,7 +112,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -144,7 +144,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "38.500",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -176,7 +176,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -208,7 +208,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -240,7 +240,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Mineral Green",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -272,7 +272,7 @@ export class AllproductsService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -305,7 +305,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "32.000",
         "color": "Цвет: Cactus",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -335,7 +335,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "32.000",
         "color": "Цвет: Cameo",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -365,7 +365,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "32.000",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -395,7 +395,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "28.500",
         "color": "Цвет: Cameo",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -426,7 +426,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "28.500",
         "color": "Цвет: Cannella",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -457,7 +457,7 @@ export class AllproductsService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "28.500",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -488,7 +488,7 @@ export class AllproductsService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "40.000",
         "color": "Цвет: Greige",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -518,7 +518,7 @@ export class AllproductsService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "40.000",
         "color": "Цвет: Marshmallow",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -548,7 +548,7 @@ export class AllproductsService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "40.000",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -579,7 +579,7 @@ export class AllproductsService {
       {
         "model": "FURLA OPPORTUNITY",
         "name": "Сумка-Тоут L",
-        "price": "руб 31.000,00",
+        "price": "31.000",
         "color": "Цвет: Toni Naturali",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -608,8 +608,8 @@ export class AllproductsService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 31.200,00",
-        "priceSale": "руб 39.000,00",
+        "price": "31.200",
+        "priceSale": "39.000",
         "color": "Цвет: Fullmoon",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -643,8 +643,8 @@ export class AllproductsService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 31.200,00",
-        "priceSale": "руб 39.000,00",
+        "price": "31.200",
+        "priceSale": "39.000",
         "color": "Цвет: Greige",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -677,8 +677,8 @@ export class AllproductsService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "30.800",
+        "priceSale": "38.500",
         "color": "Цвет: Soil",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -706,8 +706,8 @@ export class AllproductsService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "30.800",
+        "priceSale": "38.500",
         "color": "Цвет: Ballerina I",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -735,8 +735,8 @@ export class AllproductsService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "30.800",
+        "priceSale": "38.500",
         "color": "Цвет: Ciliegia D",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -764,8 +764,8 @@ export class AllproductsService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "30.800",
+        "priceSale": "38.500",
         "collectionSale": "Sale",
         "color": "Цвет: Talco H",
         "description": "ОПИСАНИЕ\n" +
@@ -793,7 +793,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Spriz + Nero",
         "collectionNew": "New collection",
         "size": "S",
@@ -822,7 +822,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1001",
@@ -851,7 +851,7 @@ export class AllproductsService {
       {
         "model": "FURLA MAN GIOVE",
         "name": "Сумка-Торба, Мини-Формат",
-        "price": "руб 22.500,00",
+        "price": "22.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1002",
@@ -881,7 +881,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Toni Caffe",
         "size": "S",
         "productId": "1003",
@@ -912,7 +912,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Nero",
         "size": "M",
         "productId": "1004",
@@ -942,7 +942,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Stone",
         "size": "M",
         "productId": "1005",
@@ -972,7 +972,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Сумка-Мессенджер M",
-        "price": "руб 31.500,00",
+        "price": "31.500",
         "color": "Цвет: Nero",
         "size": "M",
         "productId": "1006",
@@ -1005,7 +1005,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Сумка-Мессенджер M",
-        "price": "руб 31.500,00",
+        "price": "31.500",
         "color": "Цвет: Fango",
         "size": "M",
         "productId": "1007",
@@ -1038,7 +1038,7 @@ export class AllproductsService {
       {
         "model": "MAN URBAN",
         "name": "Сумка-Тоут M",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Blu Jay + Nero",
         "productId": "1008",
         "size": "M",
@@ -1070,7 +1070,7 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 44.500,00",
+        "price": "44.500",
         "color": "Цвет: Nero",
         "productId": "1009",
         "size": "M",
@@ -1105,7 +1105,7 @@ export class AllproductsService {
       {
         "model": "MAN SIRIO",
         "name": "Сумка-Дафлбэг Xl",
-        "price": "руб 43.000,00",
+        "price": "43.000",
         "color": "Цвет: Nero",
         "size": "Xl",
         "productId": "1010",
@@ -1133,8 +1133,8 @@ export class AllproductsService {
       {
         "model": "MAN PROJECT",
         "name": "Визитница S",
-        "price": "руб 6.000,00",
-        "priceSale": "руб 7.500,00",
+        "price": "6.000",
+        "priceSale": "7.500",
         "color": "Цвет: Praline + Perla + Spritz",
         "size": "S",
         "productId": "1011",
@@ -1164,8 +1164,8 @@ export class AllproductsService {
       {
         "model": "MAN COSMO",
         "name": "Чехол Для Мобильного Телефона Nero",
-        "price": "руб 6.800,00",
-        "priceSale": "руб 8.500,00",
+        "price": "6.800",
+        "priceSale": "8.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1012",

@@ -9,7 +9,7 @@ export class WomenService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "руб 34.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -41,7 +41,7 @@ export class WomenService {
       {
         "model": "FURLA 1927",
         "name": "Сумка Кросс-Боди",
-        "price": "руб 34.500,00",
+        "price": "руб 34.500",
         "color": "Цвет: Fullmoon",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -73,7 +73,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "руб 38.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -105,7 +105,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "руб 38.500",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -137,7 +137,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 38.500,00",
+        "price": "руб 38.500",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -169,7 +169,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "руб 34.000",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -201,7 +201,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "руб 34.000",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -233,7 +233,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "руб 34.000",
         "color": "Цвет: Mineral Green",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -265,7 +265,7 @@ export class WomenService {
       {
         "model": "FURLA CLUB 2",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 34.000,00",
+        "price": "руб 34.000",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
@@ -298,7 +298,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "руб 32.000",
         "color": "Цвет: Cactus",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -328,7 +328,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "руб 32.000",
         "color": "Цвет: Cameo",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -358,7 +358,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо M",
-        "price": "руб 32.000,00",
+        "price": "руб 32.000",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -388,7 +388,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "руб 28.500",
         "color": "Цвет: Cameo",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -419,7 +419,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "руб 28.500",
         "color": "Цвет: Cannella",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -450,7 +450,7 @@ export class WomenService {
       {
         "model": "FURLA FLEUR",
         "name": "Сумка На Плечо S",
-        "price": "руб 28.500,00",
+        "price": "руб 28.500",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -481,7 +481,7 @@ export class WomenService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "руб 40.000",
         "color": "Цвет: Greige",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -511,7 +511,7 @@ export class WomenService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "руб 40.000",
         "color": "Цвет: Marshmallow",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -541,7 +541,7 @@ export class WomenService {
       {
         "model": "FURLA MIASTELLA",
         "name": "Сумка На Плечо L",
-        "price": "руб 40.000,00",
+        "price": "руб 40.000",
         "color": "Цвет: Nero",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -572,7 +572,7 @@ export class WomenService {
       {
         "model": "FURLA OPPORTUNITY",
         "name": "Сумка-Тоут L",
-        "price": "руб 31.000,00",
+        "price": "руб 31.000",
         "color": "Цвет: Toni Naturali",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -601,8 +601,8 @@ export class WomenService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 31.200,00",
-        "priceSale": "руб 39.000,00",
+        "price": "руб 31.200",
+        "priceSale": "руб 39.000",
         "color": "Цвет: Fullmoon",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -636,8 +636,8 @@ export class WomenService {
       {
         "model": "FURLA 1927",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 31.200,00",
-        "priceSale": "руб 39.000,00",
+        "price": "руб 31.200",
+        "priceSale": "руб 39.000",
         "color": "Цвет: Greige",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -670,8 +670,8 @@ export class WomenService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "руб 30.800",
+        "priceSale": "руб 38.500",
         "color": "Цвет: Soil",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -699,8 +699,8 @@ export class WomenService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "руб 30.800",
+        "priceSale": "руб 38.500",
         "color": "Цвет: Ballerina I",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -728,8 +728,8 @@ export class WomenService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "руб 30.800",
+        "priceSale": "руб 38.500",
         "color": "Цвет: Ciliegia D",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -757,8 +757,8 @@ export class WomenService {
       {
         "model": "FURLA EMMA",
         "name": "Сумка С Верхней Ручкой, Мини-Формат",
-        "price": "руб 30.800,00",
-        "priceSale": "руб 38.500,00",
+        "price": "руб 30.800",
+        "priceSale": "руб 38.500",
         "collectionSale": "Sale",
         "color": "Цвет: Talco H",
         "description": "ОПИСАНИЕ\n" +

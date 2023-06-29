@@ -9,7 +9,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Spriz + Nero",
         "collectionNew": "New collection",
         "size": "S",
@@ -38,7 +38,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1001",
@@ -67,7 +67,7 @@ export class ManService {
       {
         "model": "FURLA MAN GIOVE",
         "name": "Сумка-Торба, Мини-Формат",
-        "price": "руб 22.500,00",
+        "price": "22.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1002",
@@ -97,7 +97,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Сумка Кросс-Боди S",
-        "price": "руб 26.500,00",
+        "price": "26.500",
         "color": "Цвет: Toni Caffe",
         "size": "S",
         "productId": "1003",
@@ -128,7 +128,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Nero",
         "size": "M",
         "productId": "1004",
@@ -158,7 +158,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 29.500,00",
+        "price": "29.500",
         "color": "Цвет: Stone",
         "size": "M",
         "productId": "1005",
@@ -188,7 +188,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Сумка-Мессенджер M",
-        "price": "руб 31.500,00",
+        "price": "31.500",
         "color": "Цвет: Nero",
         "size": "M",
         "productId": "1006",
@@ -221,7 +221,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Сумка-Мессенджер M",
-        "price": "руб 31.500,00",
+        "price": "31.500",
         "color": "Цвет: Fango",
         "size": "M",
         "productId": "1007",
@@ -254,7 +254,7 @@ export class ManService {
       {
         "model": "MAN URBAN",
         "name": "Сумка-Тоут M",
-        "price": "руб 34.000,00",
+        "price": "34.000",
         "color": "Цвет: Blu Jay + Nero",
         "productId": "1008",
         "size": "M",
@@ -286,7 +286,7 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Рюкзак M",
-        "price": "руб 44.500,00",
+        "price": "44.500",
         "color": "Цвет: Nero",
         "productId": "1009",
         "size": "M",
@@ -321,7 +321,7 @@ export class ManService {
       {
         "model": "MAN SIRIO",
         "name": "Сумка-Дафлбэг Xl",
-        "price": "руб 43.000,00",
+        "price": "43.000",
         "color": "Цвет: Nero",
         "size": "Xl",
         "productId": "1010",
@@ -349,8 +349,8 @@ export class ManService {
       {
         "model": "MAN PROJECT",
         "name": "Визитница S",
-        "price": "руб 6.000,00",
-        "priceSale": "руб 7.500,00",
+        "price": "6.000",
+        "priceSale": "7.500",
         "color": "Цвет: Praline + Perla + Spritz",
         "size": "S",
         "productId": "1011",
@@ -380,8 +380,8 @@ export class ManService {
       {
         "model": "MAN COSMO",
         "name": "Чехол Для Мобильного Телефона Nero",
-        "price": "руб 6.800,00",
-        "priceSale": "руб 8.500,00",
+        "price": "6.800",
+        "priceSale": "8.500",
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1012",
