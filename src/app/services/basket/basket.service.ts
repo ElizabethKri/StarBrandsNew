@@ -7,6 +7,7 @@ import {BehaviorSubject} from "rxjs";
 export class BasketService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
+  grandTotal !: number;
 
   constructor() { }
 
@@ -26,12 +27,14 @@ export class BasketService {
     console.log(this.cartItemList)
   }
 
-  getTotalPrice(): number{
+  //итоговый расчет
+  getTotalPrice(): string {
     let grandTotal = 0;
     this.cartItemList.map((a:any) =>{
-      grandTotal += a.total
+      const itemPrice = typeof a.price === "string" ? Number(a.price) : 0;
+      grandTotal += itemPrice
     })
-    return grandTotal;
+    return grandTotal.toFixed(3);
   }
   removeCartItem(product: any){
     console.log('cartItemList', this.cartItemList)
@@ -52,5 +55,6 @@ export class BasketService {
     this.cartItemList = []
     this.productList.next(this.cartItemList);
   }
+
 
 }
