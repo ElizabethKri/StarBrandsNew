@@ -20,11 +20,11 @@ export class OrderComponent  implements OnInit {
   saveValue: boolean;
   id: string;
   userForm: FormGroup| any;
-  grandTotal !: number;
+  grandTotal !: number | string;
+  total: number | string
 
   constructor(
               private http: HttpClient,
-              private userService: UserService,
               private basketService: BasketService
   ) {
   }
@@ -35,19 +35,16 @@ export class OrderComponent  implements OnInit {
       firstName: new FormControl('', {validators: Validators.required}),
       lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
       email: new FormControl('', {validators: Validators.required}),
-      telephone: new FormControl(''),
+      telephone: new FormControl('', {validators: Validators.required}),
       adress: new FormControl('', {validators: Validators.required})
     })
+
+    this.total = this.basketService.getTotalPrice()
   }
-  getTotalPrice(): number{
-    let grandTotal = 0;
-    this.basketService.cartItemList.map((a:any) =>{
-      grandTotal += a.total
-    })
-    return grandTotal;}
 
   onSubmit(){
-    this.userForm.value
+    this.userForm.value;
+    this.userForm.reset()
   }
 }
 
