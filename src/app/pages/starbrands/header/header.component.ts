@@ -49,27 +49,27 @@ export class HeaderComponent implements OnInit{
             icon: 'pi pi-bolt',
             routerLink: ['sales'],
           },
-      {
-        label: 'Профиль',
-        icon: 'pi pi-fw pi-user',
-        items: [
-          {
-            label: 'Регистрация',
-            icon: 'pi pi-fw pi-user-plus',
-            routerLink: ['/registration'],
-          },
-          {
-            label: 'Вход',
-            icon: 'pi pi-fw pi-users',
-            routerLink: ['/authorization']
-          },
-          {
-            label: 'Выход',
-            icon: 'pi pi-fw pi-power-off',
-            routerLink: ['/starbrands'],
-          }
-        ]
-      },
+      // {
+      //   label: 'Профиль',
+      //   icon: 'pi pi-fw pi-user',
+      //   items: [
+      //     {
+      //       label: 'Регистрация',
+      //       icon: 'pi pi-fw pi-user-plus',
+      //       routerLink: ['/registration'],
+      //     },
+      //     {
+      //       label: 'Вход',
+      //       icon: 'pi pi-fw pi-users',
+      //       routerLink: ['/authorization']
+      //     },
+      //     {
+      //       label: 'Выход',
+      //       icon: 'pi pi-fw pi-power-off',
+      //       routerLink: ['/starbrands'],
+      //     }
+      //   ]
+      // },
 
       {
         label: 'Корзина',
