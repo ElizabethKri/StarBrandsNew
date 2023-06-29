@@ -1,0 +1,73 @@
+
+<div class="mt-5">
+  <h1 class = "text">Оформление заказа</h1>
+  <form class = "d-flex   m-auto registration-input-wrap  md:flex-row gap-3 user-info card" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h2>Итого</h2>
+      <strong style = "font-size: 35px; color: green">{{grandTotal}} руб.</strong>
+    </div>
+    <div class = "mt-3">
+      <!--          <span class="mx-3">Имя</span>-->
+      <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Имя'}"></ng-container>
+      <input type="text"
+             class="mt-3"
+             pInputText
+             formControlName = "firstName"/>
+    </div>
+
+    <div class = "mt-3">
+      <!--            <span class="mx-3">Фамилия</span>-->
+      <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Фамилия'}"></ng-container>
+      <input type="text"
+             class="mt-3"
+             pInputText
+             formControlName = "lastName"/>
+    </div>
+
+    <div class = "mt-3">
+      <!--          <span class="mx-3">Почта</span>-->
+      <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Почта'}"></ng-container>
+      <input
+        type="text"
+        class="mt-3"
+        pInputText
+        formControlName = "email"
+        placeholder="abc@gmail.com" />
+    </div>
+
+    <div class = "mt-3">
+      <!--          <span class="mx-3">Телефон</span>-->
+      <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Телефон'}"></ng-container>
+      <p-inputMask
+        mask="(999) 999-9999"
+        placeholder="(999) 999-9999"></p-inputMask>
+    </div>
+
+    <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Адрес'}"></ng-container>
+    <div class = "mt-3">
+    <textarea
+      type="text"
+      class="mt-3"
+      pInputText
+      formControlName = "adress"></textarea>
+  </div>
+
+
+    <div class="mt-5 d-flex justify-content-center">
+      <button
+        routerLink = '/starbrands/order-list'
+        (click)="onSubmit()"
+              type="button"
+              class="btn btn-success">
+        Оформить заказ</button>&nbsp;
+      <button
+        routerLink = '/starbrands/main'
+        type="button"
+        class="btn btn-dark">
+        Отмена</button>
+    </div>
+   <ng-template #userFieldTitle let-value = "titleValue">
+      <span class = "mx-3">{{value}}</span>
+    </ng-template>
+  </form>
+</div>
