@@ -33,6 +33,12 @@ const routes: Routes = [
 
     {path: 'main',
       loadChildren: () => import('../main/main.module').then(m => m.MainModule)
+    },
+    {path: 'order',
+      loadChildren: () => import('../order/order.module').then(m => m.OrderModule)
+    },
+    {path: 'order-list',
+      loadChildren: () => import('../order/order-list/order-list.module').then(m => m.OrderListModule)
     }
   ]},
 
