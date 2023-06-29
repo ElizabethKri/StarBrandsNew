@@ -3,6 +3,7 @@ import {ManService} from "../../services/man/man.service";
 import {WomenService} from "../../services/women/women.service";
 import {NewService} from "../../services/new/new.service";
 import {SaleService} from "../../services/sale/sale.service";
+import {BasketService} from "../../services/basket/basket.service";
 
 @Component({
   selector: 'app-sales',
@@ -18,6 +19,7 @@ export class SalesComponent implements OnInit {
   constructor(
               private productSaleManService: SaleService,
               private productSaleWomenService: SaleService,
+              private basketService: BasketService
   ) {
   }
 
@@ -34,5 +36,9 @@ export class SalesComponent implements OnInit {
       this.productsW = productsW;
       console.log('this.products', this.products)
     });
+  }
+
+  addtocart(item: any){
+    this.basketService.addtoCart(item)
   }
 }

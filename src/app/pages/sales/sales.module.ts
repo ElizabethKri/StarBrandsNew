@@ -8,10 +8,11 @@ import {FormsModule} from "@angular/forms";
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {CarouselModule} from "primeng/carousel";
+import { SaleItemComponent } from './sale-item/sale-item.component';
 
 
 @NgModule({
-  declarations: [SalesComponent],
+  declarations: [SalesComponent, SaleItemComponent],
   imports: [
     CommonModule,
     SalesRoutingModule,

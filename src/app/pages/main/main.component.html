@@ -10,10 +10,10 @@
           <div class = "mr-2">
             <h4 class="mb-1">{{ product.module }}</h4>
             <h4 class="mb-1">{{ product.name }}</h4>
-            <h6 class="mt-0 mb-3">{{product.price}}</h6>
+            <h6 class="mt-0 mb-3">{{product.price}} руб.</h6>
             <h6 class="mt-0 mb-3">{{product.collectionNew}}</h6>
             <div class="car-buttons mt-5">
-              <p-button type="button" label="Подробнее" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
+              <p-button type="button" label="Подробнее" (click)="goToProductInfoPage(product)" styleClass="p-button p-button mr-2" icon="pi pi-heart-fill"></p-button>
               <p-button type="button" label="Корзина" (click)="addtocart(product)" styleClass="p-button-success p-button mr-2" icon="pi pi-shopping-bag"></p-button>
             </div>
           </div>
@@ -32,7 +32,7 @@
         <p>{{ item.name }}</p>
         <img class="imgW" alt="Card" src="/assets/img/women/{{ item.img }}" />
       </ng-template>
-      <p class="mb-1">{{ item.price}}</p>
+      <p class="mb-1">{{ item.price}} руб.</p>
       <h6 class="mt-0 mb-3">{{item.collectionNew}}</h6>
       <ng-template pTemplate="footer">
         <p-button label="Подробнее" (click)="goToProductInfoPage(item)"  icon="pi pi-heart-fill"></p-button>

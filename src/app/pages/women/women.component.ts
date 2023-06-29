@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {WomenService} from "../../services/women/women.service";
 import {AllproductsService} from "../../services/allproducts/allproducts.service";
+import {Products} from "../../interface/products";
+import {Router} from "@angular/router";
+import {BasketService} from "../../services/basket/basket.service";
 
 
 @Component({
@@ -15,7 +18,9 @@ export class WomenComponent implements OnInit{
   productsCopy: any[];
 
   constructor( private productServiceW: WomenService,
-               private productsAllService: AllproductsService
+               private productsAllService: AllproductsService,
+               private router: Router,
+               private basketService: BasketService
   ) { }
   ngOnInit(): void {
 
@@ -35,5 +40,14 @@ export class WomenComponent implements OnInit{
       }
 
     })
+  }
+
+  goToProductInfoPage(item: Products){
+    console.log('dd')
+    this.router.navigate([`/starbrands/product/${item.productId}`])
+  };
+
+  addtocart(item: any){
+    this.basketService.addtoCart(item)
   }
 }
