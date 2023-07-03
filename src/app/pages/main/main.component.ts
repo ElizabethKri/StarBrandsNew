@@ -67,7 +67,12 @@ export class MainComponent implements OnInit{
 goToProductInfoPage(item: Products){
   console.log('dd')
   this.router.navigate([`/starbrands/product/${item.productId}`])
+
 };
+  goToProductInfoPageM(product: Products ){
+    console.log('dd')
+    this.router.navigate([`/starbrands/product/${product.productId}`])
+  }
 
   addtocart(item: any){
     this.basketService.addtoCart(item)
