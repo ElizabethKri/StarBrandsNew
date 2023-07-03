@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Subject} from "rxjs";
+import {BehaviorSubject, Observable, Subject} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,13 @@ export class AllproductsService {
   private searchSubject = new BehaviorSubject(null);
   readonly searchSubject$ = this.searchSubject.asObservable();
 
-  sendSearchText(val:string | null): void {
+  constructor(private http: HttpClient) {
+  }
+
+  sendSearchText(val: string | null): void {
     this.searchSubject.next(val);
   }
+
   getAllProductsData() {
     return [
       {
@@ -798,7 +803,7 @@ export class AllproductsService {
         "collectionNew": "New collection",
         "size": "S",
         "description": "ОПИСАНИЕ\n" +
-          "\n"  + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
+          "\n" + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
           "\n" +
           "- Регулируемый ремешок из жаккардовой ткани с логотипом\n" +
           "- Внутренний карман\n" +
@@ -828,7 +833,7 @@ export class AllproductsService {
         "productId": "1001",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
-          "\n" +"Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
+          "\n" + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
           "\n" +
           "- Регулируемый ремешок из жаккардовой ткани с логотипом\n" +
           "- Внутренний карман\n" +
@@ -857,7 +862,7 @@ export class AllproductsService {
         "productId": "1002",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
-          "\n"  + "Маленькая сумка-торба Furla Man Giove выполнена из зерненой кожи. Модель без подкладки. Благодаря удобному плечевому ремню и кожаному ремешку многофункциональную сумку можно носить на манер кросс-боди или в руке. Идеальный аксессуар для путешествий и отдыха.\n" +
+          "\n" + "Маленькая сумка-торба Furla Man Giove выполнена из зерненой кожи. Модель без подкладки. Благодаря удобному плечевому ремню и кожаному ремешку многофункциональную сумку можно носить на манер кросс-боди или в руке. Идеальный аксессуар для путешествий и отдыха.\n" +
           "\n" +
           "- Кулиска\n" +
           "- Тисненый логотип Furla спереди\n" +
@@ -875,7 +880,7 @@ export class AllproductsService {
           "Палладий\n" +
           "\n" +
           "Высота\n" +
-          "22.0 cm" ,
+          "22.0 cm",
         "img": "2. Сумка-Торба, Мини-Формат Nero.jpg",
       },
       {
@@ -906,7 +911,7 @@ export class AllproductsService {
           "46% Полиуретан 10% Кожа 34% Полиэстер 10% Хлопок\n" +
           "\n" +
           "Высота\n" +
-          "25.5 cm" ,
+          "25.5 cm",
         "img": "3. Сумка Кросс-Боди S Toni Caffe'.jpg",
       },
       {
@@ -936,7 +941,7 @@ export class AllproductsService {
           "90% NY 10% Кожа\n" +
           "\n" +
           "Высота\n" +
-          "40.0 cm" ,
+          "40.0 cm",
         "img": "4. Рюкзак M Nero.jpg",
       },
       {
@@ -966,7 +971,7 @@ export class AllproductsService {
           "90% NY 10% Кожа\n" +
           "\n" +
           "Высота\n" +
-          "40.0 cm" ,
+          "40.0 cm",
         "img": "4.1 Рюкзак M Stone.jpg",
       },
       {
@@ -1195,7 +1200,6 @@ export class AllproductsService {
     ]
   }
 
-  constructor() { }
 
   getProducts() {
     return Promise.resolve(this.getAllProductsData());
@@ -1204,8 +1208,15 @@ export class AllproductsService {
   filterProductData(data, searchVal: string) {
     return data.filter((el) => {
       //проверка на строку, ищет при всех регистрах
-      const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase(): '';
+      const nameToLower = typeof (el?.name) === "string" ? el.name.toLowerCase() : '';
       return nameToLower.includes(searchVal.toLowerCase());
     });
+  }
+
+  createProducts(body: any): Observable<any> {
+    return this.http.post("http://localhost:3000/product-item/", body, {
+      headers: {}
+    })
+
   }
 }

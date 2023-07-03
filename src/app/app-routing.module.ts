@@ -23,6 +23,12 @@ const routes: Routes = [
   {path: 'basket',
     loadChildren: () => import('./pages/basket/basket.module').then(m => m.BasketModule)
   },
+  {path: 'product-load',
+    loadChildren: () => import('./pages/admin/product-load/product-load.module').then(m => m.ProductLoadModule)
+  },
+  {path: 'order-admin',
+    loadChildren: () => import('./pages/admin/order-admin/order-admin.module').then(m => m.OrderAdminModule)
+  },
   {path: '**',
    redirectTo: 'starbrands'
   }
