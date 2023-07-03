@@ -8,6 +8,8 @@ export class BasketService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   grandTotal !: number;
+  numofItems = new BehaviorSubject([])
+
 
   constructor() { }
 

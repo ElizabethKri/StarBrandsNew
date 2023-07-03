@@ -1,7 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MenuItem} from "primeng/api";
 import {debounceTime, fromEvent, Subject, takeUntil} from "rxjs";
-import {Products} from "../../../interface/products";
 import {AllproductsService} from "../../../services/allproducts/allproducts.service";
 import {BasketService} from "../../../services/basket/basket.service";
 
@@ -18,12 +17,17 @@ export class HeaderComponent implements OnInit{
   destroyer = new Subject();
   products: any [];
   totalItem: number = 0;
+  itemInCart: number;
 
   constructor( private productsAll: AllproductsService, private basketService: BasketService){}
 
   items: MenuItem[];
 
   ngOnInit() {
+    //кол-во вывод
+    this.basketService.numofItems.subscribe(d =>{
+      this.itemInCart = d.length
+    })
 
     //выводить номер на корзине
     this.basketService.getProduct().subscribe(res =>{
@@ -49,32 +53,28 @@ export class HeaderComponent implements OnInit{
             icon: 'pi pi-bolt',
             routerLink: ['sales'],
           },
-      // {
-      //   label: 'Профиль',
-      //   icon: 'pi pi-fw pi-user',
-      //   items: [
-      //     {
-      //       label: 'Регистрация',
-      //       icon: 'pi pi-fw pi-user-plus',
-      //       routerLink: ['/registration'],
-      //     },
-      //     {
-      //       label: 'Вход',
-      //       icon: 'pi pi-fw pi-users',
-      //       routerLink: ['/authorization']
-      //     },
-      //     {
-      //       label: 'Выход',
-      //       icon: 'pi pi-fw pi-power-off',
-      //       routerLink: ['/starbrands'],
-      //     }
-      //   ]
-      // },
 
       {
         label: 'Корзина',
         icon: 'pi pi-shopping-bag',
         routerLink: ['basket'],
+      },
+
+      {
+        label: 'Для администратора',
+        icon: 'pi pi-fw pi-user',
+        items: [
+          {
+            label: 'Создание продукта',
+            icon: 'pi pi-fw pi-user-plus',
+            routerLink: ['/product-load'],
+          },
+          {
+            label: 'История заказов',
+            icon: 'pi pi-fw pi-users',
+            routerLink: ['order-admin']
+          },
+        ]
       },
     ];
   }
