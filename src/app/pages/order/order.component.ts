@@ -35,7 +35,7 @@ export class OrderComponent  implements OnInit {
       firstName: new FormControl('', {validators: Validators.required}),
       lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
       email: new FormControl('', {validators: Validators.required}),
-      telephone: new FormControl('', {validators: Validators.required}),
+      telephone: new FormControl(),
       adress: new FormControl('', {validators: Validators.required})
     })
 
@@ -44,7 +44,6 @@ export class OrderComponent  implements OnInit {
 
   onSubmit(){
     this.userForm.value;
-    this.userForm.reset()
   }
 }
 

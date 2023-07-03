@@ -60,7 +60,7 @@
       <button
         routerLink = '/starbrands/order-list'
         (click)="onSubmit()"
-        [disabled]="this.userForm.invalid"
+        [disabled]="!userForm.valid"
         type="button"
         class="btn btn-success">
         Оформить заказ</button>&nbsp;
