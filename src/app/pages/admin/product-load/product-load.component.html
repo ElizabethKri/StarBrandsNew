@@ -1,0 +1,53 @@
+<div class="mt-4 ">
+  <h4 class="text">Создание продукта</h4>
+  <form class="mt-3 user-info" [formGroup]="productForm">
+
+    <div class="mt-3">
+      <span class="mx-3">Наименование продукта</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "name"
+             pInputText />
+    </div>
+
+    <div class="mt-3">
+      <span class="price">Цена</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "price"
+             pInputText />
+    </div>
+
+    <div class="mt-3">
+      <span class="priceSale">Цена для Sale</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "priceSale"
+             pInputText />
+    </div>
+
+    <div class="mt-3">
+      <span class="collection">Коллекция</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "collection"
+             pInputText />
+    </div>
+
+    <div class="mt-3">
+      <span class="mx-3">Изображение</span>
+      <input type="file"
+             class = "mt-3"
+             (change)="selectFile($event)"/>
+    </div>
+
+    <div class="mt-4">
+      <button class="btn-success btn" type="submit"
+              (click)="createProducts()"
+              [disabled] = "!productForm.valid">
+        Создать продукт
+      </button>
+    </div>
+
+  </form>
+</div>
