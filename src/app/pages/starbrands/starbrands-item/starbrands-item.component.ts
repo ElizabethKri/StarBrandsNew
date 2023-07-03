@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Products} from "../../../interface/products";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewService} from "../../../services/new/new.service";
+import {BasketService} from "../../../services/basket/basket.service";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class StarbrandsItemComponent implements  OnInit{
   productItem: Products;
 
 
-  constructor(private router: Router,private route: ActivatedRoute, private newService: NewService
+  constructor(private router: Router,private route: ActivatedRoute, private newService: NewService, private basketService: BasketService
   ) { }
 
 
@@ -30,5 +31,9 @@ export class StarbrandsItemComponent implements  OnInit{
 
     console.log('cardId', cardId)
 
+  }
+
+  addtocart(item: any){
+    this.basketService.addtoCart(item)
   }
 }
