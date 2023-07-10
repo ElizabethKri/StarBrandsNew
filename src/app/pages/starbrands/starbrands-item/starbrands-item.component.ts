@@ -15,6 +15,7 @@ export class StarbrandsItemComponent implements  OnInit{
   productItem: Products;
 
 
+
   constructor(private router: Router,private route: ActivatedRoute, private newService: NewService, private basketService: BasketService
   ) { }
 
@@ -22,11 +23,16 @@ export class StarbrandsItemComponent implements  OnInit{
   ngOnInit() {
     const cardId = this.route.snapshot.paramMap.get('id');
 
-     this.newService.getProductsNewW().then((data: any) => {
+     this.newService.getAllProducts().then((data: any) => {
        this.products = data;
-
        this.productItem = this.products.find(el => el.productId === cardId)
      })
+
+    //
+    // this.newService.getProductsNewWoman().then((data: any) => {
+    //   this.products = data;
+    //   this.productItem = this.products.find(el => el.productId === cardId)
+    // })
 
 
     console.log('cardId', cardId)

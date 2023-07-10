@@ -45,10 +45,13 @@ host ::ng-deep {
 }
 
 .main-content{
-  flex: 1;
+  flex-grow: 1;
+  min-height: 100%;
+  box-sizing: border-box;
   display: flex;
   & > div {
     width: 100%;
+    min-height: 100%;
   }
 }
 .woman-list {
