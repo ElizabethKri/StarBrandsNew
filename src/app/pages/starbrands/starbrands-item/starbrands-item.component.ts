@@ -39,6 +39,9 @@ export class StarbrandsItemComponent implements  OnInit{
 
   }
 
+  goToPage() {
+
+  }
   addtocart(item: any){
     this.basketService.addtoCart(item)
   }
