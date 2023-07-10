@@ -3,24 +3,23 @@
     <div>
       <router-outlet></router-outlet>
     </div>
-    <!--<div><app-aside></app-aside></div>-->
     <ng-container>
       <div class=" h-50">
       <h1 class="text">Коллекция для женщин</h1>
       <div class="m-2 flex-wrap woman-list">
-        <p-card *ngFor="let item of productsW"  [style]="{ width: '350px', height: '600px' }">
+        <p-card *ngFor="let productWoman of productsWoman"  [style]="{ width: '350px', height: '600px' }">
           <ng-template let-product pTemplate="header">
-            <p>{{ item.module }}</p>
-            <p>{{ item.name }}</p>
-            <img class="imgW" alt="Card" src="/assets/img/women/{{ item.img }}" />
+            <p>{{ productWoman.module }}</p>
+            <p>{{ productWoman.name }}</p>
+            <img class="imgW" alt="Card" src="/assets/img/women/{{ productWoman.img }}" />
           </ng-template>
-          <p class="mb-1">{{ item.price}} руб.</p>
-          <p class="mb-1 del">{{ item.priceSale}}</p>
-          <p class="mb-1">{{ item.collectionNew}}</p>
-          <p class="mb-1 ">{{ item.collectionSale}}</p>
+          <p class="mb-1">{{ productWoman.price}} руб.</p>
+          <p class="mb-1 del">{{ productWoman.priceSale}}</p>
+          <p class="mb-1">{{ productWoman.collectionNew}}</p>
+          <p class="mb-1 ">{{productWoman.collectionSale}}</p>
           <ng-template pTemplate="footer">
-            <p-button label="Подробнее" (click)="goToProductInfoPage(item)" icon="pi pi-heart-fill"></p-button>
-            <p-button label="Корзина" (click)="addtocart(item)"  icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            <p-button label="Подробнее" (click)="goToProductInfoPage(productWoman)" icon="pi pi-heart-fill"></p-button>
+            <p-button label="Корзина" (click)="addtocart(productWoman)"  icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
           </ng-template>
         </p-card>
       </div>

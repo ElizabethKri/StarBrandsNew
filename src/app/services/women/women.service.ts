@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class WomenService {
-  getWomenProductsData(){
+  getWomenProductsData() {
     return [
       {
         "model": "FURLA 1927",
@@ -785,9 +787,18 @@ export class WomenService {
       },
     ]
   }
-  constructor() { }
 
-  getProductsW() {
+  constructor(private http: HttpClient) {
+  }
+
+  getProductsWoman() {
     return Promise.resolve(this.getWomenProductsData());
+  }
+
+  createProducts(body: any): Observable<any> {
+    return this.http.post("http://localhost:3000/product-item/", body, {
+      headers: {}
+    })
+
   }
 }

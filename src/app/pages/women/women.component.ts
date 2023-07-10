@@ -12,9 +12,8 @@ import {BasketService} from "../../services/basket/basket.service";
   styleUrls: ['./women.component.scss']
 })
 export class WomenComponent implements OnInit{
-  products: any[];
   responsiveOptions: any[];
-  productsW: any [];
+  productsWoman: any [];
   productsCopy: any[];
 
   constructor( private productServiceW: WomenService,
@@ -24,19 +23,19 @@ export class WomenComponent implements OnInit{
   ) { }
   ngOnInit(): void {
 
-    this.productServiceW.getProductsW().then((productsW) => {
+    this.productServiceW.getProductsWoman().then((productsWoman) => {
 
-      this.productsW = productsW;
-      this.productsCopy = [...productsW];
-      console.log('this.products', this.products)
+      this.productsWoman = productsWoman;
+      this.productsCopy = [...productsWoman];
+
     });
 
     this.productsAllService.searchSubject$.subscribe((searchVal: string) => {
       console.log('searchVal', searchVal)
       if (searchVal) {
-        this.productsW = this.productsAllService.filterProductData(this.productsCopy, searchVal);
+        this.productsWoman = this.productsAllService.filterProductData(this.productsCopy, searchVal);
       } else {
-        this.productsW = [...this.productsCopy];
+        this.productsWoman = [...this.productsCopy];
       }
 
     })
