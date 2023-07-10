@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Products} from "../../../interface/products";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewService} from "../../../services/new/new.service";
+import {ManService} from "../../../services/man/man.service";
 
 @Component({
   selector: 'app-man-item',
@@ -10,24 +11,20 @@ import {NewService} from "../../../services/new/new.service";
 })
 export class ManItemComponent implements  OnInit{
   products: Products[]
-  productItem: Products;
+  productMan: Products;
 
 
-  constructor(private router: Router,private route: ActivatedRoute, private newService: NewService
+  constructor(private router: Router,private route: ActivatedRoute, private manService: ManService
   ) { }
 
 
   ngOnInit(){
     const cardId = this.route.snapshot.paramMap.get('id');
-
-    this.newService.getProductsNewW().then((data: any) => {
+    console.log('***')
+    this.manService.getProductsMan().then((data: any) => {
       this.products = data;
-
-      this.productItem = this.products.find(el => el.productId === cardId)
+      this.productMan = this.products.find(el => el.productId === cardId)
     })
-
-
     console.log('cardId', cardId)
-
   }
 }

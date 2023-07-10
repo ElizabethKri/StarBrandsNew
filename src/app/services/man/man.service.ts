@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
+import {Observable, Subject} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import {Products} from "../../interface/products";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ManService {
-  getManProductsData(){
+  constructor(private http: HttpClient) {
+  }
+
+  getManProductsData() {
     return [
       {
         "model": "MAN COSMO",
@@ -14,7 +20,7 @@ export class ManService {
         "collectionNew": "New collection",
         "size": "S",
         "description": "ОПИСАНИЕ\n" +
-          "\n"  + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
+          "\n" + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
           "\n" +
           "- Регулируемый ремешок из жаккардовой ткани с логотипом\n" +
           "- Внутренний карман\n" +
@@ -44,7 +50,7 @@ export class ManService {
         "productId": "1001",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
-          "\n" +"Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
+          "\n" + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
           "\n" +
           "- Регулируемый ремешок из жаккардовой ткани с логотипом\n" +
           "- Внутренний карман\n" +
@@ -73,7 +79,7 @@ export class ManService {
         "productId": "1002",
         "collectionNew": "New collection",
         "description": "ОПИСАНИЕ\n" +
-          "\n"  + "Маленькая сумка-торба Furla Man Giove выполнена из зерненой кожи. Модель без подкладки. Благодаря удобному плечевому ремню и кожаному ремешку многофункциональную сумку можно носить на манер кросс-боди или в руке. Идеальный аксессуар для путешествий и отдыха.\n" +
+          "\n" + "Маленькая сумка-торба Furla Man Giove выполнена из зерненой кожи. Модель без подкладки. Благодаря удобному плечевому ремню и кожаному ремешку многофункциональную сумку можно носить на манер кросс-боди или в руке. Идеальный аксессуар для путешествий и отдыха.\n" +
           "\n" +
           "- Кулиска\n" +
           "- Тисненый логотип Furla спереди\n" +
@@ -91,7 +97,7 @@ export class ManService {
           "Палладий\n" +
           "\n" +
           "Высота\n" +
-          "22.0 cm" ,
+          "22.0 cm",
         "img": "2. Сумка-Торба, Мини-Формат Nero.jpg",
       },
       {
@@ -122,7 +128,7 @@ export class ManService {
           "46% Полиуретан 10% Кожа 34% Полиэстер 10% Хлопок\n" +
           "\n" +
           "Высота\n" +
-          "25.5 cm" ,
+          "25.5 cm",
         "img": "3. Сумка Кросс-Боди S Toni Caffe'.jpg",
       },
       {
@@ -152,7 +158,7 @@ export class ManService {
           "90% NY 10% Кожа\n" +
           "\n" +
           "Высота\n" +
-          "40.0 cm" ,
+          "40.0 cm",
         "img": "4. Рюкзак M Nero.jpg",
       },
       {
@@ -182,7 +188,7 @@ export class ManService {
           "90% NY 10% Кожа\n" +
           "\n" +
           "Высота\n" +
-          "40.0 cm" ,
+          "40.0 cm",
         "img": "4.1 Рюкзак M Stone.jpg",
       },
       {
@@ -411,15 +417,39 @@ export class ManService {
     ]
   }
 
+  //для удаления и формирования списка туров
+  private productUpdateSubject = new Subject<Products[]>();
+  readonly productUpdateSubject$ = this.productUpdateSubject.asObservable();
+
   getProductsSmall() {
     return Promise.resolve(this.getManProductsData().slice(0, 10));
   }
 
-  getProducts() {
+   getProductsMan() {
     return Promise.resolve(this.getManProductsData());
   }
 
+  // createProducts(body: any): Observable<any> {
+  //   return this.http.post("http://localhost:3000/product-item/", body, {
+  //     headers: {}
+  //   })
+  // }
+
+    getProducts(): Observable<Products[]>{
+      return  this.http.get<Products[]>('http://localhost:3000/products/')
+    }
+
+  deleteProducts(): Observable<any> {
+    return this.http.delete("http://localhost:3000/products/");
+  }
+
+  // initProduct(): Observable<any> {
+  //   return this.http.get("http://localhost:3000/products/");
+  // }
+
+  updateProductList(data: Products[]) {
+    this.productUpdateSubject.next(data);
+  }
 
 
-  constructor() { }
 }

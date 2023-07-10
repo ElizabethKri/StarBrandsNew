@@ -7,19 +7,19 @@
       <div class=" h-50">
         <h1 class="text">Коллекция для мужчин</h1>
         <div class="m-2 flex-wrap woman-list">
-          <p-card *ngFor="let item of productsM"  [style]="{ width: '350px', height: '600px' }">
+          <p-card *ngFor="let productMan of productsMan"  [style]="{ width: '350px', height: '600px' }">
             <ng-template let-product pTemplate="header">
-              <p>{{ item.module }}</p>
-              <p>{{ item.name }}</p>
-              <img class="imgW" alt="Card" src="/assets/img/man/{{ item.img }}" />
+              <p>{{ productMan.module }}</p>
+              <p>{{ productMan.name }}</p>
+              <img class="imgW" alt="Card" src="/assets/img/man/{{ productMan.img }}" />
             </ng-template>
-            <p class="mb-1">{{ item.price}} руб.</p>
-            <p class="mb-1 del" >{{ item.priceSale}}</p>
-            <p class="mb-1">{{ item.collectionNew}}</p>
-            <p class="mb-1">{{ item.collectionSale}}</p>
+            <p class="mb-1">{{ productMan.price}} руб.</p>
+            <p class="mb-1 del" >{{ productMan.priceSale}}</p>
+            <p class="mb-1">{{ productMan.collectionNew}}</p>
+            <p class="mb-1">{{ productMan.collectionSale}}</p>
             <ng-template pTemplate="footer">
-              <p-button label="Подробнее" (click)="goToProductInfoPage(item)" icon="pi pi-heart-fill"></p-button>
-              <p-button label="Корзина"  (click)="addtocart(item)" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+              <p-button label="Подробнее" (click)="goToProductInfoPage(productMan)" icon="pi pi-heart-fill"></p-button>
+              <p-button label="Корзина"  (click)="addtocart(productMan)" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
             </ng-template>
           </p-card>
         </div>
