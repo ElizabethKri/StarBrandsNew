@@ -486,12 +486,15 @@ export class NewService {
     return Promise.resolve(this.getManNewProductsData());
   }
 
-  getProductsNewW() {
+  getProductsNewWoman() {
     return Promise.resolve(this.getWomenNewProductsData());
   }
 
-  getProductsSmall() {
+  getProductsNewMan() {
     return Promise.resolve(this.getManNewProductsData().slice(0, 10));
+  }
+  getAllProducts(): any {
+    return Promise.resolve([...this.getWomenNewProductsData(), ...this.getManNewProductsData()]);
   }
   constructor() { }
 }
