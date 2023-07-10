@@ -6,6 +6,7 @@ const routes: Routes = [
   {path: '', component: OrderAdminComponent}
 ];
 
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
