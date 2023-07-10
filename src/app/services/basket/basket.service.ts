@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
+import {OrderAdminComponent} from "../../pages/admin/order-admin/order-admin.component";
+import {OrderAdminService} from "../order-admin/order-admin.service";
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +10,11 @@ export class BasketService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   grandTotal !: number;
-  numofItems = new BehaviorSubject([])
+  numofItems = new BehaviorSubject([]);
 
 
-  constructor() { }
+
+  constructor(private orderAdmin: OrderAdminService) { }
 
   getProduct(){
     return this.productList.asObservable();
@@ -58,5 +61,11 @@ export class BasketService {
     this.productList.next(this.cartItemList);
   }
 
+  sendProductsData(data): Observable<any>{
+    return this.orderAdmin.sendOrderData(data);
+  }
+  getOrderData(): Observable<any>{
+    return this.orderAdmin.getOrderData();
+  }
 
 }
