@@ -28,4 +28,5 @@ export class WomenItemComponent implements  OnInit{
 
     console.log('cardId', cardId)
   }
+
 }
