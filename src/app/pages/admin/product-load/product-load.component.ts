@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AllproductsService} from "../../../services/allproducts/allproducts.service";
+import {Subject, takeUntil} from "rxjs";
+import {Products} from "../../../interface/products";
 
 @Component({
   selector: 'app-product-load',
@@ -9,14 +11,31 @@ import {AllproductsService} from "../../../services/allproducts/allproducts.serv
 })
 export class ProductLoadComponent {
   productForm: FormGroup;
+  gender: any[]
+  products: any;
+  destroyer = new Subject();
   constructor(private allProductsService: AllproductsService) {
   }
   ngOnInit(): void {
+    // this.gender = [
+    //   {name: 'Man'},
+    //   {name: 'Woman'}
+    // ]
+
+    this.allProductsService.productUpdateSubject$.pipe(takeUntil(this.destroyer)).subscribe((data) => {
+      this.products = data; //обновление значений
+    })
+
     this.productForm = new FormGroup({
       name: new FormControl('', {validators: Validators.required}),
-      collection: new FormControl('', [Validators.required, Validators.minLength(2)]),
       price: new FormControl('', {validators: Validators.required}),
+      color: new FormControl('', {validators: Validators.required}),
+      description: new FormControl('', {validators: Validators.required}),
+      model: new FormControl('', {validators: Validators.required}),
       priceSale: new FormControl(),
+      // collectionNew: new FormControl(),
+      // collectionSale: new FormControl(),
+      productType: new FormControl('woman'),
       img: new FormControl(),
     });
   }
@@ -35,6 +54,9 @@ export class ProductLoadComponent {
     this.allProductsService.createProducts(formParams).subscribe(() => {})
   }
 
+
+
+
   //файлы
   selectFile(ev: any): void {
     console.log('ev', ev)
@@ -47,4 +69,23 @@ export class ProductLoadComponent {
       })
     }
   }
+
+ //удаление продукта
+  deleteProduct(): void {
+      this.allProductsService.deleteProducts().subscribe((data) => {
+        this.allProductsService.updateProductList([])
+      })
+  }
+
+  //формирование продукта
+  // initProduct(): void {
+  //   this.allProductsService.createProducts().subscribe((data) => {
+  //     this.allProductsService.updateProductList([])
+  //   })
+  // }
+
+
+
+
+
 }

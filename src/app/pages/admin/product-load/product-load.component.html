@@ -26,14 +26,52 @@
              pInputText />
     </div>
 
+<!--    <div class="mt-3">-->
+<!--      <span class="collectionNew">Новая коллекция</span>-->
+<!--      <input type="text"-->
+<!--             class = "mt-3"-->
+<!--             formControlName = "collectionNew"-->
+<!--             pInputText />-->
+<!--    </div>-->
+<!--    <div class="mt-3">-->
+<!--      <span class="collectionSale">Sale коллекция</span>-->
+<!--      <input type="text"-->
+<!--             class = "mt-3"-->
+<!--             formControlName = "collectionSale"-->
+<!--             pInputText />-->
+<!--    </div>-->
+<!-- Цвет, модель и описание входят только в подробную инфу-->
     <div class="mt-3">
-      <span class="collection">Коллекция</span>
+      <span class="color">Цвет</span>
       <input type="text"
              class = "mt-3"
-             formControlName = "collection"
+             formControlName = "color"
              pInputText />
     </div>
 
+    <div class="mt-3">
+      <span class="model">Модель</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "model"
+             pInputText />
+    </div>
+
+    <div class="mt-3">
+      <span class="description">Описание</span>
+      <input type="text"
+             class = "mt-3"
+             formControlName = "description"
+             pInputText />
+</div>
+
+            <div class="mt-3">
+          <span class="collection">Коллекция</span>
+        <p-dropdown formControlName="productType"
+                    class = "mt-3"
+                    [options]="['man', 'woman', 'new', 'sale']"
+                    ></p-dropdown>
+        </div>
     <div class="mt-3">
       <span class="mx-3">Изображение</span>
       <input type="file"
@@ -46,6 +84,13 @@
               (click)="createProducts()"
               [disabled] = "!productForm.valid">
         Создать продукт
+      </button>
+    </div>
+
+    <div class="mt-4">
+      <button class="btn-danger btn" type="submit"
+              (click)="deleteProduct()">
+        Удалить продукты
       </button>
     </div>
 

@@ -5,6 +5,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {InputNumberModule} from "primeng/inputnumber";
 import {InputTextModule} from "primeng/inputtext";
 import {ProductLoadComponent} from "./product-load.component";
+import {DropdownModule} from "primeng/dropdown";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 @NgModule({
@@ -15,7 +18,8 @@ import {ProductLoadComponent} from "./product-load.component";
     ReactiveFormsModule,
     FormsModule,
     InputNumberModule,
-    InputTextModule
+    InputTextModule,
+    DropdownModule,
   ]
 })
 export class ProductLoadModule { }
