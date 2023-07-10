@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, Subject} from "rxjs";
+import {BehaviorSubject, Observable, of, Subject} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {Products} from "../../interface/products";
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,10 @@ import {HttpClient} from "@angular/common/http";
 export class AllproductsService {
   private searchSubject = new BehaviorSubject(null);
   readonly searchSubject$ = this.searchSubject.asObservable();
+  man: any;
+  woman: any;
+  all: any
+
 
   constructor(private http: HttpClient) {
   }
@@ -16,6 +21,25 @@ export class AllproductsService {
     this.searchSubject.next(val);
   }
 
+  initProducts() {
+    of().subscribe((data) => {
+      this.all = data;
+       // const type = ['man', 'woman', 'sale', 'new']
+       // this.man =data.filter(el => el.type === 'man')
+      // this.woman =data.filter(el => el.type === 'woman')
+    })
+  }
+
+ getMan() {
+    return this.man
+ }
+  getWoman() {
+    return this.woman
+  }
+
+ deleteManItem(id) {
+    this.man= this.man.filter((el => el.id !== id))
+ }
   getAllProductsData() {
     return [
       {
@@ -24,6 +48,7 @@ export class AllproductsService {
         "price": "34.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мини-сумка Furla 1927 из мягкой и шелковистой кожи теленка позволит компактно разместить самые необходимые в повседневной жизни предметы. Этот эффектный аксессуар с тиснением под крокодила можно носить как на плече, так и на манер кросс-боди.\n" +
@@ -56,6 +81,7 @@ export class AllproductsService {
         "price": "34.500",
         "color": "Цвет: Fullmoon",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мини-сумка Furla 1927 из мягкой и шелковистой кожи теленка позволит компактно разместить самые необходимые в повседневной жизни предметы. Этот эффектный аксессуар с тиснением под крокодила можно носить как на плече, так и на манер кросс-боди.\n" +
@@ -88,6 +114,7 @@ export class AllproductsService {
         "price": "38.500",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -120,6 +147,7 @@ export class AllproductsService {
         "price": "38.500",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -152,6 +180,7 @@ export class AllproductsService {
         "price": "38.500",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -184,6 +213,7 @@ export class AllproductsService {
         "price": "34.000",
         "color": "Цвет: Greige",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -216,6 +246,7 @@ export class AllproductsService {
         "price": "34.000",
         "color": "Цвет: Marshmallow",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -248,6 +279,7 @@ export class AllproductsService {
         "price": "34.000",
         "color": "Цвет: Mineral Green",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -280,6 +312,7 @@ export class AllproductsService {
         "price": "34.000",
         "color": "Цвет: Soil",
         "collectionNew": "New collection",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Изысканная сумка-saddle Furla Club 2 – универсальный аксессуар, который вместит в себя все самое необходимое. Модель с лаконичным обтекаемым силуэтом представляет собой новую интерпретацию культового дизайна из архивов Furla. Она выполнена из мягкой и гладкой кожи теленка с отделкой из зерненой кожи. Благодаря регулируемому ремню сумку можно носить на плече или через плечо.\n" +
@@ -312,6 +345,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо M",
         "price": "32.000",
         "color": "Цвет: Cactus",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -342,6 +376,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо M",
         "price": "32.000",
         "color": "Цвет: Cameo",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -372,6 +407,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо M",
         "price": "32.000",
         "color": "Цвет: Nero",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной сумкой на плечо Furla Fleur все самое необходимое будет всегда под рукой. Минималистичная модель трапециевидной формы выполнена из гладкой и мягкой кожи теленка с приятной на ощупь текстурой. Аксессуар дополнен съемным регулируемым ремнем, благодаря которому сумку можно носить как на плече, так и через плечо.\n" +
@@ -402,6 +438,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо S",
         "price": "28.500",
         "color": "Цвет: Cameo",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мягкая и гладкая телячья кожа и минималистичная трапециевидная форма делают элегантную сумку Furla Fleur неповторимой. Эта маленькая элегантная сумка имеет вместительное внутреннее отделение для хранения личных вещей, а регулируемый плечевой ремень позволяет носить ее кросс-боди или на плече, освобождая руки.\n" +
@@ -433,6 +470,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо S",
         "price": "28.500",
         "color": "Цвет: Cannella",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мягкая и гладкая телячья кожа и минималистичная трапециевидная форма делают элегантную сумку Furla Fleur неповторимой. Эта маленькая элегантная сумка имеет вместительное внутреннее отделение для хранения личных вещей, а регулируемый плечевой ремень позволяет носить ее кросс-боди или на плече, освобождая руки.\n" +
@@ -464,6 +502,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо S",
         "price": "28.500",
         "color": "Цвет: Nero",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мягкая и гладкая телячья кожа и минималистичная трапециевидная форма делают элегантную сумку Furla Fleur неповторимой. Эта маленькая элегантная сумка имеет вместительное внутреннее отделение для хранения личных вещей, а регулируемый плечевой ремень позволяет носить ее кросс-боди или на плече, освобождая руки.\n" +
@@ -495,6 +534,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо L",
         "price": "40.000",
         "color": "Цвет: Greige",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка Furla Miastella большого формата выполнена из мягкой кожи теленка Roma и зерненой кожи теленка. Универсальная модель на каждый день позволяет всегда иметь под рукой все необходимое.\n" +
@@ -525,6 +565,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо L",
         "price": "40.000",
         "color": "Цвет: Marshmallow",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка Furla Miastella большого формата выполнена из мягкой кожи теленка Roma и зерненой кожи теленка. Универсальная модель на каждый день позволяет всегда иметь под рукой все необходимое.\n" +
@@ -555,6 +596,7 @@ export class AllproductsService {
         "name": "Сумка На Плечо L",
         "price": "40.000",
         "color": "Цвет: Nero",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка Furla Miastella большого формата выполнена из мягкой кожи теленка Roma и зерненой кожи теленка. Универсальная модель на каждый день позволяет всегда иметь под рукой все необходимое.\n" +
@@ -586,6 +628,7 @@ export class AllproductsService {
         "name": "Сумка-Тоут L",
         "price": "31.000",
         "color": "Цвет: Toni Naturali",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка-тоут Furla Opportunity отличается внушительными пропорциями: в ней найдется место для всего, что может понадобиться на работе или на отдыхе. Модель выполнена из переработанной жаккардовой ткани с легендарным логотипом Arch и украшена деталями из гладкой кожи. Благодаря ручкам в тон сумку удобно носить в руке, что делает ее идеальным аксессуаром на любой случай.\n" +
@@ -617,6 +660,7 @@ export class AllproductsService {
         "priceSale": "39.000",
         "color": "Цвет: Fullmoon",
         "collectionSale": "Sale",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной мини-сумкой с верхней ручкой Furla 1927 все самые важные вещи будут всегда под рукой. Модель из нубука с тиснением под крокодила отличается мягкой на ощупь шелковистой текстурой. Аксессуар дополнен съемным ремнем, благодаря которому сумку можно носить не только в руке, но и на плече.\n" +
@@ -652,6 +696,7 @@ export class AllproductsService {
         "priceSale": "39.000",
         "color": "Цвет: Greige",
         "collectionSale": "Sale",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "С элегантной мини-сумкой с верхней ручкой Furla 1927 все самые важные вещи будут всегда под рукой. Модель из нубука с тиснением под крокодила отличается мягкой на ощупь шелковистой текстурой. Аксессуар дополнен съемным ремнем, благодаря которому сумку можно носить не только в руке, но и на плече.\n" +
@@ -686,6 +731,7 @@ export class AllproductsService {
         "priceSale": "38.500",
         "color": "Цвет: Soil",
         "collectionSale": "Sale",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мини-сумка Furla Emma выполнена из сочетания мягкой телячьей кожи Roma и зернистой кожи. При необходимости размер изделия регулируется с помощью практичных боковых кнопок. Сумка оснащена характерной застежкой с поворотным замком и логотипом Arch спереди.\n" +
@@ -715,6 +761,7 @@ export class AllproductsService {
         "priceSale": "38.500",
         "color": "Цвет: Ballerina I",
         "collectionSale": "Sale",
+        "productType": "Woman",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Мини-сумка Furla Emma выполнена из сочетания мягкой телячьей кожи Roma и зернистой кожи. При необходимости размер изделия регулируется с помощью практичных боковых кнопок. Сумка оснащена характерной застежкой с поворотным замком и логотипом Arch спереди.\n" +
@@ -772,6 +819,7 @@ export class AllproductsService {
         "price": "30.800",
         "priceSale": "38.500",
         "collectionSale": "Sale",
+        "productType": "Woman",
         "color": "Цвет: Talco H",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -800,6 +848,7 @@ export class AllproductsService {
         "name": "Сумка Кросс-Боди S",
         "price": "26.500",
         "color": "Цвет: Spriz + Nero",
+        "productTypeMan": "Man",
         "collectionNew": "New collection",
         "size": "S",
         "description": "ОПИСАНИЕ\n" +
@@ -832,6 +881,7 @@ export class AllproductsService {
         "size": "S",
         "productId": "1001",
         "collectionNew": "New collection",
+        "productTypeMan": "Man",
         "description": "ОПИСАНИЕ\n" +
           "\n" + "Furla Man Cosmo – идеальныая сумка для путешествий. Это практичная сумка кросс-боди, изготовленная из сочетания легкого нейлона и роскошной тисненой кожи. Эта компактная сумка с внешним карманом на застежке-молнии – идеальный выбор для активных людей.\n" +
           "\n" +
@@ -861,6 +911,7 @@ export class AllproductsService {
         "size": "S",
         "productId": "1002",
         "collectionNew": "New collection",
+        "productTypeMan": "Man",
         "description": "ОПИСАНИЕ\n" +
           "\n" + "Маленькая сумка-торба Furla Man Giove выполнена из зерненой кожи. Модель без подкладки. Благодаря удобному плечевому ремню и кожаному ремешку многофункциональную сумку можно носить на манер кросс-боди или в руке. Идеальный аксессуар для путешествий и отдыха.\n" +
           "\n" +
@@ -891,6 +942,7 @@ export class AllproductsService {
         "size": "S",
         "productId": "1003",
         "collectionNew": "New collection",
+        "productTypeMan": "Man",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка кросс-боди Furla Man Cosmo в формате мини выполнена из ткани с принтом в виде цепи с логотипом Arch. Миниатюрная сумка идеально подходит для путешествий и отдыха.\n" +
@@ -920,6 +972,7 @@ export class AllproductsService {
         "price": "29.500",
         "color": "Цвет: Nero",
         "size": "M",
+        "productTypeMan": "Man",
         "productId": "1004",
         "collectionNew": "New collection",
         "description": "Рюкзак Furla Man Cosmo выполнен из нейлоновой ткани. Благодаря расположенному сзади удобному нейлоновому ремешку модель можно легко прикрепить к чемодану во время путешествия. Внутренний карман сзади позволяет хранить ноутбук и электронные устройства.\n" +
@@ -950,6 +1003,7 @@ export class AllproductsService {
         "price": "29.500",
         "color": "Цвет: Stone",
         "size": "M",
+        "productTypeMan": "Man",
         "productId": "1005",
         "collectionNew": "New collection",
         "description": "Рюкзак Furla Man Cosmo выполнен из нейлоновой ткани. Благодаря расположенному сзади удобному нейлоновому ремешку модель можно легко прикрепить к чемодану во время путешествия. Внутренний карман сзади позволяет хранить ноутбук и электронные устройства.\n" +
@@ -980,6 +1034,7 @@ export class AllproductsService {
         "price": "31.500",
         "color": "Цвет: Nero",
         "size": "M",
+        "productTypeMan": "Man",
         "productId": "1006",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -1014,6 +1069,7 @@ export class AllproductsService {
         "color": "Цвет: Fango",
         "size": "M",
         "productId": "1007",
+        "productTypeMan": "Man",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Сумка кросс-боди Furla Man Cosmo выполнена из телячьей кожи Selene. Сумка застегивается на клапан спереди, что делает ее уникальной и неповторимой благодаря двум металлическим пряжкам, украшенным логотипом Arch Furla, выгравированным спереди. Внешний задний карман обеспечивает легкий доступ к вашим вещам.\n" +
@@ -1046,6 +1102,7 @@ export class AllproductsService {
         "price": "34.000",
         "color": "Цвет: Blu Jay + Nero",
         "productId": "1008",
+        "productTypeMan": "Man",
         "size": "M",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -1079,6 +1136,7 @@ export class AllproductsService {
         "color": "Цвет: Nero",
         "productId": "1009",
         "size": "M",
+        "productTypeMan": "Man",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
           "Рюкзак Furla Man Cosmo из телячьей кожи Selene идеально подходит для путешествий. Передняя застежка на клапан с металлической пряжкой, украшенной логотипом Arch, позволяет легко и быстро разместить все самое необходимое. Рюкзак можно легко прикрепить к чемодану с помощью расположенного сзади нейлонового ремешка.\n" +
@@ -1142,6 +1200,7 @@ export class AllproductsService {
         "priceSale": "7.500",
         "color": "Цвет: Praline + Perla + Spritz",
         "size": "S",
+        "productTypeMan": "Man",
         "productId": "1011",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
@@ -1174,6 +1233,7 @@ export class AllproductsService {
         "color": "Цвет: Nero",
         "size": "S",
         "productId": "1012",
+        "productTypeMan": "Man",
         "collectionSale": "Sale",
         "description": "ОПИСАНИЕ\n" +
           "\n" +
@@ -1199,6 +1259,9 @@ export class AllproductsService {
       }
     ]
   }
+  //для удаления и формирования списка туров
+  private productUpdateSubject = new Subject<Products[]>();
+  readonly productUpdateSubject$ = this.productUpdateSubject.asObservable();
 
 
   getProducts() {
@@ -1217,6 +1280,24 @@ export class AllproductsService {
     return this.http.post("http://localhost:3000/product-item/", body, {
       headers: {}
     })
-
   }
+
+  // getProduct(): Observable<Products[]>{
+  //   return  this.http.get<Products[]>('http://localhost:3000/products/')
+  // }
+
+
+  deleteProducts(): Observable<any> {
+    return this.http.delete("http://localhost:3000/products/");
+  }
+
+  // initProduct(): Observable<any> {
+  //   return this.http.get("http://localhost:3000/products/");
+  // }
+
+  updateProductList(data: Products[]) {
+    this.productUpdateSubject.next(data);
+  }
+
+
 }
