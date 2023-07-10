@@ -41,6 +41,7 @@
       <!--          <span class="mx-3">Телефон</span>-->
       <ng-container *ngTemplateOutlet="userFieldTitle; context: {titleValue: 'Телефон'}"></ng-container>
       <p-inputMask
+        formControlName = "telephone"
         mask="(999) 999-9999"
         placeholder="(999) 999-9999"></p-inputMask>
     </div>
@@ -59,7 +60,7 @@
     <div class="mt-5 d-flex justify-content-center">
       <button
         routerLink = '/starbrands/order-list'
-        (click)="onSubmit()"
+        (click)="initOrders()"
         [disabled]="!userForm.valid"
         type="button"
         class="btn btn-success">
