@@ -63,16 +63,17 @@ export class HeaderComponent implements OnInit{
       {
         label: 'Для администратора',
         icon: 'pi pi-fw pi-user',
+        routerLink: ['/starbrands/order-admin'],
         items: [
-          {
-            label: 'Создание продукта',
-            icon: 'pi pi-fw pi-user-plus',
-            routerLink: ['/product-load'],
-          },
+          // {
+          //   label: 'Создание продукта',
+          //   icon: 'pi pi-fw pi-user-plus',
+          //   routerLink: ['/product-load'],
+          // },
           {
             label: 'История заказов',
             icon: 'pi pi-fw pi-users',
-            routerLink: ['order-admin']
+            routerLink: ['/starbrands/order-admin']
           },
         ]
       },
