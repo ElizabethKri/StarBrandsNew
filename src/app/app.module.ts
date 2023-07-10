@@ -11,6 +11,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {StarbrandsModule} from "./pages/starbrands/starbrands.module";
 
 import { OrderListComponent } from './pages/order/order-list/order-list.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OrderListComponent } from './pages/order/order-list/order-list.componen
         RouterModule,
         HttpClientModule,
         FontAwesomeModule,
-        StarbrandsModule
+        StarbrandsModule,
+      BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
