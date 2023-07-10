@@ -4,6 +4,8 @@ import {WomenService} from "../../services/women/women.service";
 import {NewService} from "../../services/new/new.service";
 import {SaleService} from "../../services/sale/sale.service";
 import {BasketService} from "../../services/basket/basket.service";
+import {Products} from "../../interface/products";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sales',
@@ -13,27 +15,28 @@ import {BasketService} from "../../services/basket/basket.service";
 export class SalesComponent implements OnInit {
   products: any[];
   responsiveOptions: any[];
-  productsW: any []
-  productsM: any []
+  productsWoman: any []
+  productsMan: any []
 
   constructor(
               private productSaleManService: SaleService,
               private productSaleWomenService: SaleService,
-              private basketService: BasketService
+              private basketService: BasketService,
+              private router: Router
   ) {
   }
 
   ngOnInit(): void {
 
-    this.productSaleManService.getProductsSaleM().then((productsM) => {
+    this.productSaleManService.getProductsSaleMan().then((productsM) => {
 
-      this.productsM = productsM;
+      this.productsMan = productsM;
       console.log('this.products', this.products)
     });
 
-    this.productSaleWomenService.getProductsSaleW().then((productsW) => {
+    this.productSaleWomenService.getProductsSaleWoman().then((productsW) => {
 
-      this.productsW = productsW;
+      this.productsWoman = productsW;
       console.log('this.products', this.products)
     });
   }
@@ -41,4 +44,9 @@ export class SalesComponent implements OnInit {
   addtocart(item: any){
     this.basketService.addtoCart(item)
   }
+
+  goToProductInfoPage(item: Products){
+    console.log('dd')
+    this.router.navigate([`/starbrands/product/${item.productId}`])
+  };
 }

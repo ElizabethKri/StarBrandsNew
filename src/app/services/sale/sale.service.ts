@@ -260,11 +260,11 @@ export class SaleService {
 
     ]}
 
-  getProductsSaleM() {
+  getProductsSaleMan() {
     return Promise.resolve(this.getManSaleProductsData());
   }
 
-  getProductsSaleW() {
+  getProductsSaleWoman() {
     return Promise.resolve(this.getWomenSaleProductsData());
   }
 
