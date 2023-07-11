@@ -14,17 +14,29 @@ export class ManComponent implements OnInit{
 
   responsiveOptions: any[];
   productsMan: any []
+  productsCopy: any[]
 
   constructor( private productServiceMan: ManService, private router: Router,
                private basketService: BasketService,
-               private allproductsService: AllproductsService
+               private productsAllService: AllproductsService
   ) { }
   ngOnInit(): void {
 
 
     this.productServiceMan.getProductsMan().then((productsMan) => {
       this.productsMan = productsMan;
+      this.productsCopy = [...productsMan];
     });
+    this.productsAllService.searchSubject$.subscribe((searchVal: string) => {
+      console.log('searchVal', searchVal)
+      if (searchVal) {
+        this.productsMan = this.productsAllService.filterProductData(this.productsCopy, searchVal);
+      } else {
+        this.productsMan = [...this.productsCopy];
+      }
+
+    })
+
   }
   goToProductInfoPage(item: Products){
     console.log('dd')

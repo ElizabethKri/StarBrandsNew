@@ -10,13 +10,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AsideComponent} from "../starbrands/aside/aside.component";
 import {TreeModule} from "primeng/tree";
 import {DropdownModule} from "primeng/dropdown";
-import { WomenItemComponent } from './women-item/women-item.component';
-import {WomenItemModule} from "./women-item/women-item.module";
+
 
 
 
 @NgModule({
-    declarations: [WomenComponent, AsideComponent, WomenItemComponent],
+    declarations: [WomenComponent, AsideComponent],
 
   imports: [
     CommonModule,
@@ -26,7 +25,6 @@ import {WomenItemModule} from "./women-item/women-item.module";
     CardModule,
     FormsModule,
     DropdownModule,
-    WomenItemModule,
     ReactiveFormsModule,
     TreeModule
   ]
