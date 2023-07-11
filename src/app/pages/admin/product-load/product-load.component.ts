@@ -22,9 +22,9 @@ export class ProductLoadComponent {
     //   {name: 'Woman'}
     // ]
 
-    this.allProductsService.productUpdateSubject$.pipe(takeUntil(this.destroyer)).subscribe((data) => {
-      this.products = data; //обновление значений
-    })
+    // this.allProductsService.productUpdateSubject$.pipe(takeUntil(this.destroyer)).subscribe((data) => {
+    //   this.products = data; //обновление значений
+    // })
 
     this.productForm = new FormGroup({
       name: new FormControl('', {validators: Validators.required}),
@@ -40,42 +40,42 @@ export class ProductLoadComponent {
     });
   }
 
-  createProducts(): void {
-    //считывает все значения
-    const productDataRow = this.productForm.getRawValue();
-    //отправка данных разных типов
-    let formParams = new FormData();
-    if (typeof productDataRow === "object"){
-      for (let prop in productDataRow){
-        //prop - ключ
-        formParams.append(prop, productDataRow[prop])
-      }
-    }
-    this.allProductsService.createProducts(formParams).subscribe(() => {})
-  }
+  // createProducts(): void {
+  //   //считывает все значения
+  //   const productDataRow = this.productForm.getRawValue();
+  //   //отправка данных разных типов
+  //   let formParams = new FormData();
+  //   if (typeof productDataRow === "object"){
+  //     for (let prop in productDataRow){
+  //       //prop - ключ
+  //       formParams.append(prop, productDataRow[prop])
+  //     }
+  //   }
+  //   this.allProductsService.createProducts(formParams).subscribe(() => {})
+  // }
 
 
 
 
-  //файлы
-  selectFile(ev: any): void {
-    console.log('ev', ev)
-    if (ev.target.files.length > 0){
-      const file = ev.target.files[0];
-      console.log('file', file)
-      //добавляет значение
-      this.productForm.patchValue({
-        img: file
-      })
-    }
-  }
-
- //удаление продукта
-  deleteProduct(): void {
-      this.allProductsService.deleteProducts().subscribe((data) => {
-        this.allProductsService.updateProductList([])
-      })
-  }
+ //  //файлы
+ //  selectFile(ev: any): void {
+ //    console.log('ev', ev)
+ //    if (ev.target.files.length > 0){
+ //      const file = ev.target.files[0];
+ //      console.log('file', file)
+ //      //добавляет значение
+ //      this.productForm.patchValue({
+ //        img: file
+ //      })
+ //    }
+ //  }
+ //
+ // //удаление продукта
+ //  deleteProduct(): void {
+ //      this.allProductsService.deleteProducts().subscribe((data) => {
+ //        this.allProductsService.updateProductList([])
+ //      })
+ //  }
 
   //формирование продукта
   // initProduct(): void {
