@@ -39,7 +39,7 @@
       <p class="mb-1 del">{{ productMan.priceSale}} руб.</p>
       <p class="mb-1">{{ productMan.collectionSale}}</p>
       <ng-template pTemplate="footer">
-        <p-button label="Подробнее" icon="pi pi-heart-fill"></p-button>
+        <p-button label="Подробнее" (click)="goToProductInfoPage(productMan)" icon="pi pi-heart-fill"></p-button>
         <p-button label="Корзина" (click)="addtocart(productMan)" icon="pi pi-shopping-bag" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
       </ng-template>
     </p-card>

@@ -268,6 +268,10 @@ export class SaleService {
     return Promise.resolve(this.getWomenSaleProductsData());
   }
 
+  getAllSaleProducts(){
+    return Promise.resolve([...this.getManSaleProductsData(), ...this.getWomenSaleProductsData()]);
+  }
+
 
   constructor() { }
 }
