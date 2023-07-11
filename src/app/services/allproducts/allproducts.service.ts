@@ -1259,9 +1259,9 @@ export class AllproductsService {
       }
     ]
   }
-  //для удаления и формирования списка туров
-  private productUpdateSubject = new Subject<Products[]>();
-  readonly productUpdateSubject$ = this.productUpdateSubject.asObservable();
+  // для удаления и формирования списка туров
+  // private productUpdateSubject = new Subject<Products[]>();
+  // readonly productUpdateSubject$ = this.productUpdateSubject.asObservable();
 
 
   getProducts() {
@@ -1276,28 +1276,28 @@ export class AllproductsService {
     });
   }
 
-  createProducts(body: any): Observable<any> {
-    return this.http.post("http://localhost:3000/product-item/", body, {
-      headers: {}
-    })
-  }
+  // createProducts(body: any): Observable<any> {
+  //   return this.http.post("http://localhost:3000/product-item/", body, {
+  //     headers: {}
+  //   })
+  // }
 
   // getProduct(): Observable<Products[]>{
   //   return  this.http.get<Products[]>('http://localhost:3000/products/')
   // }
 
 
-  deleteProducts(): Observable<any> {
-    return this.http.delete("http://localhost:3000/products/");
-  }
+  // deleteProducts(): Observable<any> {
+  // //   return this.http.delete("http://localhost:3000/products/");
+  // }
 
   // initProduct(): Observable<any> {
   //   return this.http.get("http://localhost:3000/products/");
   // }
-
-  updateProductList(data: Products[]) {
-    this.productUpdateSubject.next(data);
-  }
+  //
+  // updateProductList(data: Products[]) {
+  //   this.productUpdateSubject.next(data);
+  // }
 
 
 }
