@@ -19,11 +19,6 @@ export class OrderAdminService {
     return this.http.get<Order[]>('http://localhost:3000/order/')
   }
 
-
-getUserInfo(){
-}
-
-
 }
 
 
