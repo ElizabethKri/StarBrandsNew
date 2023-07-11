@@ -3,6 +3,7 @@ import {Products} from "../../../interface/products";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NewService} from "../../../services/new/new.service";
 import {BasketService} from "../../../services/basket/basket.service";
+import {AllproductsService} from "../../../services/allproducts/allproducts.service";
 
 
 @Component({
@@ -16,14 +17,14 @@ export class StarbrandsItemComponent implements  OnInit{
 
 
 
-  constructor(private router: Router,private route: ActivatedRoute, private newService: NewService, private basketService: BasketService
+  constructor(private router: Router,private route: ActivatedRoute, private newService: NewService, private basketService: BasketService, private allProductsService: AllproductsService
   ) { }
 
 
   ngOnInit() {
     const cardId = this.route.snapshot.paramMap.get('id');
 
-     this.newService.getAllProducts().then((data: any) => {
+     this.allProductsService.getProducts().then((data: any) => {
        this.products = data;
        this.productItem = this.products.find(el => el.productId === cardId)
      })
